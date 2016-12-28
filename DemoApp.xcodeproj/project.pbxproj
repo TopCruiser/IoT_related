@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC3D62A11E13D7CF00EA66BA /* MainNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3D62A01E13D7CF00EA66BA /* MainNC.swift */; };
+		CC4433051E1411E40040F638 /* TJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4433041E1411E40040F638 /* TJTextField.swift */; };
 		CEF1A0721E13144200D2B789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1A0711E13144200D2B789 /* AppDelegate.swift */; };
 		CEF1A0741E13144200D2B789 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1A0731E13144200D2B789 /* SplashVC.swift */; };
 		CEF1A0771E13144200D2B789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF1A0751E13144200D2B789 /* Main.storyboard */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC3D62A01E13D7CF00EA66BA /* MainNC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNC.swift; sourceTree = "<group>"; };
+		CC4433041E1411E40040F638 /* TJTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TJTextField.swift; path = CustomControls/TJTextField.swift; sourceTree = "<group>"; };
 		CEF1A06E1E13144200D2B789 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF1A0711E13144200D2B789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF1A0731E13144200D2B789 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
@@ -47,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC4433021E1411CC0040F638 /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				CC4433041E1411E40040F638 /* TJTextField.swift */,
+			);
+			name = CustomControls;
+			sourceTree = "<group>";
+		};
 		CEF1A0651E13144200D2B789 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +78,7 @@
 		CEF1A0701E13144200D2B789 /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				CC4433021E1411CC0040F638 /* CustomControls */,
 				CEF1A0711E13144200D2B789 /* AppDelegate.swift */,
 				CEF1A0731E13144200D2B789 /* SplashVC.swift */,
 				CEF1A0751E13144200D2B789 /* Main.storyboard */,
@@ -78,6 +91,7 @@
 				CEF1A07A1E13144200D2B789 /* LaunchScreen.storyboard */,
 				CEF1A07D1E13144200D2B789 /* Info.plist */,
 				CEF1A0851E1329C600D2B789 /* LoginVC.swift */,
+				CC3D62A01E13D7CF00EA66BA /* MainNC.swift */,
 			);
 			path = DemoApp;
 			sourceTree = "<group>";
@@ -154,12 +168,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC3D62A11E13D7CF00EA66BA /* MainNC.swift in Sources */,
 				CEF1A0741E13144200D2B789 /* SplashVC.swift in Sources */,
 				CEF1A08A1E132A6300D2B789 /* SystemReadyVC.swift in Sources */,
 				CEF1A0881E132A1100D2B789 /* CreateNetworkVC.swift in Sources */,
 				CEF1A08C1E132AFE00D2B789 /* NetworkHealthCheckVC1.swift in Sources */,
 				CEF1A0841E1328C600D2B789 /* LoginSignUpVC.swift in Sources */,
 				CEF1A0861E1329C600D2B789 /* LoginVC.swift in Sources */,
+				CC4433051E1411E40040F638 /* TJTextField.swift in Sources */,
 				CEF1A0721E13144200D2B789 /* AppDelegate.swift in Sources */,
 				CEF1A08E1E132B7600D2B789 /* NetworkHealthCheckVC2.swift in Sources */,
 			);

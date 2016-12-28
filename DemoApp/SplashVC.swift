@@ -12,7 +12,9 @@ class SplashVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.navigationController?.navigationBar.isHidden = true;
+        self.perform(#selector(self.transitToNextViewController), with : nil, afterDelay : 3.0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,6 +22,9 @@ class SplashVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    func transitToNextViewController()
+    {
+        self.performSegue(withIdentifier : "segueFromSplash", sender:self)
+    }
 }
 
