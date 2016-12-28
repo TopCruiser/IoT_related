@@ -8,20 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		CEF1A0721E13144200D2B789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1A0711E13144200D2B789 /* AppDelegate.swift */; };
-		CEF1A0741E13144200D2B789 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1A0731E13144200D2B789 /* ViewController.swift */; };
+		CEF1A0741E13144200D2B789 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1A0731E13144200D2B789 /* SplashVC.swift */; };
 		CEF1A0771E13144200D2B789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF1A0751E13144200D2B789 /* Main.storyboard */; };
 		CEF1A0791E13144200D2B789 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF1A0781E13144200D2B789 /* Assets.xcassets */; };
 		CEF1A07C1E13144200D2B789 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF1A07A1E13144200D2B789 /* LaunchScreen.storyboard */; };
+		CEF1A0841E1328C600D2B789 /* LoginSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1A0831E1328C600D2B789 /* LoginSignUpVC.swift */; };
+		CEF1A0861E1329C600D2B789 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1A0851E1329C600D2B789 /* LoginVC.swift */; };
+		CEF1A0881E132A1100D2B789 /* CreateNetworkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1A0871E132A1100D2B789 /* CreateNetworkVC.swift */; };
+		CEF1A08A1E132A6300D2B789 /* SystemReadyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1A0891E132A6300D2B789 /* SystemReadyVC.swift */; };
+		CEF1A08C1E132AFE00D2B789 /* NetworkHealthCheckVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1A08B1E132AFE00D2B789 /* NetworkHealthCheckVC1.swift */; };
+		CEF1A08E1E132B7600D2B789 /* NetworkHealthCheckVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1A08D1E132B7600D2B789 /* NetworkHealthCheckVC2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CEF1A06E1E13144200D2B789 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF1A0711E13144200D2B789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CEF1A0731E13144200D2B789 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CEF1A0731E13144200D2B789 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		CEF1A0761E13144200D2B789 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEF1A0781E13144200D2B789 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEF1A07B1E13144200D2B789 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEF1A07D1E13144200D2B789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEF1A0831E1328C600D2B789 /* LoginSignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginSignUpVC.swift; sourceTree = "<group>"; };
+		CEF1A0851E1329C600D2B789 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		CEF1A0871E132A1100D2B789 /* CreateNetworkVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNetworkVC.swift; sourceTree = "<group>"; };
+		CEF1A0891E132A6300D2B789 /* SystemReadyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemReadyVC.swift; sourceTree = "<group>"; };
+		CEF1A08B1E132AFE00D2B789 /* NetworkHealthCheckVC1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHealthCheckVC1.swift; sourceTree = "<group>"; };
+		CEF1A08D1E132B7600D2B789 /* NetworkHealthCheckVC2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHealthCheckVC2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +67,17 @@
 			isa = PBXGroup;
 			children = (
 				CEF1A0711E13144200D2B789 /* AppDelegate.swift */,
-				CEF1A0731E13144200D2B789 /* ViewController.swift */,
+				CEF1A0731E13144200D2B789 /* SplashVC.swift */,
 				CEF1A0751E13144200D2B789 /* Main.storyboard */,
+				CEF1A08D1E132B7600D2B789 /* NetworkHealthCheckVC2.swift */,
+				CEF1A08B1E132AFE00D2B789 /* NetworkHealthCheckVC1.swift */,
+				CEF1A0891E132A6300D2B789 /* SystemReadyVC.swift */,
+				CEF1A0871E132A1100D2B789 /* CreateNetworkVC.swift */,
+				CEF1A0831E1328C600D2B789 /* LoginSignUpVC.swift */,
 				CEF1A0781E13144200D2B789 /* Assets.xcassets */,
 				CEF1A07A1E13144200D2B789 /* LaunchScreen.storyboard */,
 				CEF1A07D1E13144200D2B789 /* Info.plist */,
+				CEF1A0851E1329C600D2B789 /* LoginVC.swift */,
 			);
 			path = DemoApp;
 			sourceTree = "<group>";
@@ -96,7 +114,7 @@
 				TargetAttributes = {
 					CEF1A06D1E13144200D2B789 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = L7Y7RLS5F8;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -136,8 +154,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEF1A0741E13144200D2B789 /* ViewController.swift in Sources */,
+				CEF1A0741E13144200D2B789 /* SplashVC.swift in Sources */,
+				CEF1A08A1E132A6300D2B789 /* SystemReadyVC.swift in Sources */,
+				CEF1A0881E132A1100D2B789 /* CreateNetworkVC.swift in Sources */,
+				CEF1A08C1E132AFE00D2B789 /* NetworkHealthCheckVC1.swift in Sources */,
+				CEF1A0841E1328C600D2B789 /* LoginSignUpVC.swift in Sources */,
+				CEF1A0861E1329C600D2B789 /* LoginVC.swift in Sources */,
 				CEF1A0721E13144200D2B789 /* AppDelegate.swift in Sources */,
+				CEF1A08E1E132B7600D2B789 /* NetworkHealthCheckVC2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,10 +274,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.user.DemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -261,10 +287,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = DemoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.user.DemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -287,6 +315,7 @@
 				CEF1A0821E13144200D2B789 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
