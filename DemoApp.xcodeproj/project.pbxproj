@@ -8,7 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		CC3D62A11E13D7CF00EA66BA /* MainNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3D62A01E13D7CF00EA66BA /* MainNC.swift */; };
+		CC42BBF81E14881800496329 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42BBF71E14881800496329 /* SignupVC.swift */; };
 		CC4433051E1411E40040F638 /* TJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4433041E1411E40040F638 /* TJTextField.swift */; };
+		CCC68FFD1E160268003B2B16 /* YellowNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC68FFC1E160268003B2B16 /* YellowNC.swift */; };
+		CCC690031E1687D4003B2B16 /* left_sidemenu_button.png in Resources */ = {isa = PBXBuildFile; fileRef = CCC690021E1687D4003B2B16 /* left_sidemenu_button.png */; };
+		CCC6900A1E169AD9003B2B16 /* SideMenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC690061E169AD9003B2B16 /* SideMenuManager.swift */; };
+		CCC6900B1E169AD9003B2B16 /* SideMenuTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC690071E169AD9003B2B16 /* SideMenuTransition.swift */; };
+		CCC6900C1E169AD9003B2B16 /* UISideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC690081E169AD9003B2B16 /* UISideMenuNavigationController.swift */; };
+		CCC6900D1E169AD9003B2B16 /* UITableViewVibrantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC690091E169AD9003B2B16 /* UITableViewVibrantCell.swift */; };
+		CCC6900F1E16AC89003B2B16 /* SideMenuTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC6900E1E16AC89003B2B16 /* SideMenuTableVC.swift */; };
 		CEF1A0721E13144200D2B789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1A0711E13144200D2B789 /* AppDelegate.swift */; };
 		CEF1A0741E13144200D2B789 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1A0731E13144200D2B789 /* SplashVC.swift */; };
 		CEF1A0771E13144200D2B789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF1A0751E13144200D2B789 /* Main.storyboard */; };
@@ -24,7 +32,15 @@
 
 /* Begin PBXFileReference section */
 		CC3D62A01E13D7CF00EA66BA /* MainNC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNC.swift; sourceTree = "<group>"; };
+		CC42BBF71E14881800496329 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		CC4433041E1411E40040F638 /* TJTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TJTextField.swift; path = CustomControls/TJTextField.swift; sourceTree = "<group>"; };
+		CCC68FFC1E160268003B2B16 /* YellowNC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YellowNC.swift; sourceTree = "<group>"; };
+		CCC690021E1687D4003B2B16 /* left_sidemenu_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = left_sidemenu_button.png; path = resource/left_sidemenu_button.png; sourceTree = "<group>"; };
+		CCC690061E169AD9003B2B16 /* SideMenuManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenuManager.swift; path = CustomControls/SideMenu/SideMenuManager.swift; sourceTree = "<group>"; };
+		CCC690071E169AD9003B2B16 /* SideMenuTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenuTransition.swift; path = CustomControls/SideMenu/SideMenuTransition.swift; sourceTree = "<group>"; };
+		CCC690081E169AD9003B2B16 /* UISideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UISideMenuNavigationController.swift; path = CustomControls/SideMenu/UISideMenuNavigationController.swift; sourceTree = "<group>"; };
+		CCC690091E169AD9003B2B16 /* UITableViewVibrantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableViewVibrantCell.swift; path = CustomControls/SideMenu/UITableViewVibrantCell.swift; sourceTree = "<group>"; };
+		CCC6900E1E16AC89003B2B16 /* SideMenuTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableVC.swift; sourceTree = "<group>"; };
 		CEF1A06E1E13144200D2B789 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF1A0711E13144200D2B789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF1A0731E13144200D2B789 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
@@ -54,9 +70,21 @@
 		CC4433021E1411CC0040F638 /* CustomControls */ = {
 			isa = PBXGroup;
 			children = (
+				CCC690041E169ACE003B2B16 /* SideMenu */,
 				CC4433041E1411E40040F638 /* TJTextField.swift */,
 			);
 			name = CustomControls;
+			sourceTree = "<group>";
+		};
+		CCC690041E169ACE003B2B16 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CCC690061E169AD9003B2B16 /* SideMenuManager.swift */,
+				CCC690071E169AD9003B2B16 /* SideMenuTransition.swift */,
+				CCC690081E169AD9003B2B16 /* UISideMenuNavigationController.swift */,
+				CCC690091E169AD9003B2B16 /* UITableViewVibrantCell.swift */,
+			);
+			name = SideMenu;
 			sourceTree = "<group>";
 		};
 		CEF1A0651E13144200D2B789 = {
@@ -78,10 +106,16 @@
 		CEF1A0701E13144200D2B789 /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				CCC690021E1687D4003B2B16 /* left_sidemenu_button.png */,
 				CC4433021E1411CC0040F638 /* CustomControls */,
 				CEF1A0711E13144200D2B789 /* AppDelegate.swift */,
+				CC3D62A01E13D7CF00EA66BA /* MainNC.swift */,
+				CCC68FFC1E160268003B2B16 /* YellowNC.swift */,
 				CEF1A0731E13144200D2B789 /* SplashVC.swift */,
 				CEF1A0751E13144200D2B789 /* Main.storyboard */,
+				CCC6900E1E16AC89003B2B16 /* SideMenuTableVC.swift */,
+				CEF1A0851E1329C600D2B789 /* LoginVC.swift */,
+				CC42BBF71E14881800496329 /* SignupVC.swift */,
 				CEF1A08D1E132B7600D2B789 /* NetworkHealthCheckVC2.swift */,
 				CEF1A08B1E132AFE00D2B789 /* NetworkHealthCheckVC1.swift */,
 				CEF1A0891E132A6300D2B789 /* SystemReadyVC.swift */,
@@ -90,8 +124,6 @@
 				CEF1A0781E13144200D2B789 /* Assets.xcassets */,
 				CEF1A07A1E13144200D2B789 /* LaunchScreen.storyboard */,
 				CEF1A07D1E13144200D2B789 /* Info.plist */,
-				CEF1A0851E1329C600D2B789 /* LoginVC.swift */,
-				CC3D62A01E13D7CF00EA66BA /* MainNC.swift */,
 			);
 			path = DemoApp;
 			sourceTree = "<group>";
@@ -157,6 +189,7 @@
 			files = (
 				CEF1A07C1E13144200D2B789 /* LaunchScreen.storyboard in Resources */,
 				CEF1A0791E13144200D2B789 /* Assets.xcassets in Resources */,
+				CCC690031E1687D4003B2B16 /* left_sidemenu_button.png in Resources */,
 				CEF1A0771E13144200D2B789 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,15 +201,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCC6900B1E169AD9003B2B16 /* SideMenuTransition.swift in Sources */,
 				CC3D62A11E13D7CF00EA66BA /* MainNC.swift in Sources */,
 				CEF1A0741E13144200D2B789 /* SplashVC.swift in Sources */,
+				CCC6900F1E16AC89003B2B16 /* SideMenuTableVC.swift in Sources */,
 				CEF1A08A1E132A6300D2B789 /* SystemReadyVC.swift in Sources */,
 				CEF1A0881E132A1100D2B789 /* CreateNetworkVC.swift in Sources */,
+				CCC6900A1E169AD9003B2B16 /* SideMenuManager.swift in Sources */,
 				CEF1A08C1E132AFE00D2B789 /* NetworkHealthCheckVC1.swift in Sources */,
 				CEF1A0841E1328C600D2B789 /* LoginSignUpVC.swift in Sources */,
 				CEF1A0861E1329C600D2B789 /* LoginVC.swift in Sources */,
 				CC4433051E1411E40040F638 /* TJTextField.swift in Sources */,
 				CEF1A0721E13144200D2B789 /* AppDelegate.swift in Sources */,
+				CC42BBF81E14881800496329 /* SignupVC.swift in Sources */,
+				CCC6900C1E169AD9003B2B16 /* UISideMenuNavigationController.swift in Sources */,
+				CCC68FFD1E160268003B2B16 /* YellowNC.swift in Sources */,
+				CCC6900D1E169AD9003B2B16 /* UITableViewVibrantCell.swift in Sources */,
 				CEF1A08E1E132B7600D2B789 /* NetworkHealthCheckVC2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

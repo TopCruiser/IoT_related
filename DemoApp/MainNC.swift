@@ -23,12 +23,9 @@ class MainNC: UINavigationController {
     func initView(){
         
         self.navigationBar.tintColor = UIColor.white
-        self.navigationBar.barTintColor = UIColor(red: 191/255, green:46/255, blue:26/255, alpha: 1)
-        
-        let titleDict : NSDictionary = [NSForegroundColorAttributeName : UIColor.white]
-        self.navigationBar.titleTextAttributes = titleDict as? [String : AnyObject]
-        
-        //self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage.init(named: "submenu.png"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(stupidAction))
+        self.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationBar.shadowImage = UIImage()
+        self.navigationBar.isTranslucent = true
     }
     
 }
