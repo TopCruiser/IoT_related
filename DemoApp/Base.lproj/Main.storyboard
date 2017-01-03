@@ -598,7 +598,7 @@
                                 <rect key="frame" x="0.0" y="92" width="414" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="playback" tableViewCell="kRr-yA-fAv" id="tvp-nw-pjz">
-                                    <frame key="frameInset" width="414" height="59"/>
+                                    <frame key="frameInset" width="414" height="59.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
@@ -671,42 +671,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Person wifi is online! 5 device" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ffs-Yb-JlW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up_divider" translatesAutoresizingMaskIntoConstraints="NO" id="fYn-99-xxh"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down_divider" translatesAutoresizingMaskIntoConstraints="NO" id="4Xu-m8-PiO"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earth" translatesAutoresizingMaskIntoConstraints="NO" id="7k4-Tb-lzk"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5device" translatesAutoresizingMaskIntoConstraints="NO" id="bdH-Tt-tog"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Person wifi is online! 5 device" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ffs-Yb-JlW">
+                                <frame key="frameInset" minX="75" minY="66" width="225" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="1" green="0.59607843140000005" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orange_circle" translatesAutoresizingMaskIntoConstraints="NO" id="yi8-C7-8M4">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earth" translatesAutoresizingMaskIntoConstraints="NO" id="xE3-1V-UIp"/>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="orange_circle" translatesAutoresizingMaskIntoConstraints="NO" id="Np3-n8-F4Y">
-                                <frame key="frameInset" minX="98" minY="407" width="82" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="chain" translatesAutoresizingMaskIntoConstraints="NO" id="IRF-yB-BDV">
-                                <frame key="frameInset" minX="110" minY="415" width="58" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chain" translatesAutoresizingMaskIntoConstraints="NO" id="XIW-BG-qGS"/>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="yi8-C7-8M4" firstAttribute="centerY" secondItem="cft-Wj-aUG" secondAttribute="centerY" multiplier="0.9" id="2f3-zq-CIb"/>
-                            <constraint firstItem="xE3-1V-UIp" firstAttribute="centerX" secondItem="cft-Wj-aUG" secondAttribute="centerX" id="39X-9u-67t"/>
-                            <constraint firstItem="xE3-1V-UIp" firstAttribute="height" secondItem="cft-Wj-aUG" secondAttribute="height" multiplier="0.08" id="3ja-lJ-ays"/>
-                            <constraint firstItem="yi8-C7-8M4" firstAttribute="height" secondItem="cft-Wj-aUG" secondAttribute="height" multiplier="0.1" id="7pH-Ll-zAQ"/>
-                            <constraint firstItem="yi8-C7-8M4" firstAttribute="width" secondItem="cft-Wj-aUG" secondAttribute="width" multiplier="0.2" id="9iC-rg-O7k"/>
-                            <constraint firstItem="Ffs-Yb-JlW" firstAttribute="centerY" secondItem="cft-Wj-aUG" secondAttribute="centerY" multiplier="0.3" id="D6g-um-Jfq"/>
-                            <constraint firstItem="Ffs-Yb-JlW" firstAttribute="width" secondItem="cft-Wj-aUG" secondAttribute="width" multiplier="0.6" id="E3q-0d-Tc9"/>
-                            <constraint firstItem="yi8-C7-8M4" firstAttribute="centerX" secondItem="cft-Wj-aUG" secondAttribute="centerX" id="XsF-sH-pTV"/>
-                            <constraint firstItem="Ffs-Yb-JlW" firstAttribute="height" secondItem="cft-Wj-aUG" secondAttribute="height" multiplier="0.1" id="b6A-7g-7oY"/>
-                            <constraint firstItem="xE3-1V-UIp" firstAttribute="width" secondItem="cft-Wj-aUG" secondAttribute="width" multiplier="0.14" id="j1Z-8b-HGQ"/>
-                            <constraint firstItem="xE3-1V-UIp" firstAttribute="centerY" secondItem="cft-Wj-aUG" secondAttribute="centerY" multiplier="0.9" id="oiN-hD-Ch9"/>
-                            <constraint firstItem="Ffs-Yb-JlW" firstAttribute="centerX" secondItem="cft-Wj-aUG" secondAttribute="centerX" id="xpk-3t-KE0"/>
+                            <constraint firstItem="4Xu-m8-PiO" firstAttribute="height" secondItem="cft-Wj-aUG" secondAttribute="height" multiplier="0.23" id="75j-3b-z61"/>
+                            <constraint firstItem="7k4-Tb-lzk" firstAttribute="width" secondItem="cft-Wj-aUG" secondAttribute="width" multiplier="0.2" id="87o-tl-pHS"/>
+                            <constraint firstItem="bdH-Tt-tog" firstAttribute="width" secondItem="cft-Wj-aUG" secondAttribute="width" multiplier="0.2" id="8ze-d0-JyX"/>
+                            <constraint firstItem="4Xu-m8-PiO" firstAttribute="width" secondItem="cft-Wj-aUG" secondAttribute="width" multiplier="0.4" id="C8n-SW-Q85"/>
+                            <constraint firstItem="7k4-Tb-lzk" firstAttribute="centerX" secondItem="cft-Wj-aUG" secondAttribute="centerX" id="CNa-Qx-eSV"/>
+                            <constraint firstItem="fYn-99-xxh" firstAttribute="centerY" secondItem="cft-Wj-aUG" secondAttribute="centerY" id="Jor-OJ-drM"/>
+                            <constraint firstItem="fYn-99-xxh" firstAttribute="width" secondItem="cft-Wj-aUG" secondAttribute="width" multiplier="0.4" id="LCa-5k-DIy"/>
+                            <constraint firstItem="XIW-BG-qGS" firstAttribute="height" secondItem="cft-Wj-aUG" secondAttribute="height" multiplier="0.12" id="LfW-MY-ts6"/>
+                            <constraint firstItem="bdH-Tt-tog" firstAttribute="centerY" secondItem="cft-Wj-aUG" secondAttribute="centerY" multiplier="1.6" id="O1O-vL-aMQ"/>
+                            <constraint firstItem="bdH-Tt-tog" firstAttribute="height" secondItem="cft-Wj-aUG" secondAttribute="height" multiplier="0.12" id="Qqw-am-gmU"/>
+                            <constraint firstItem="XIW-BG-qGS" firstAttribute="centerX" secondItem="cft-Wj-aUG" secondAttribute="centerX" multiplier="0.3" id="Rqm-A3-FPj"/>
+                            <constraint firstItem="fYn-99-xxh" firstAttribute="centerX" secondItem="cft-Wj-aUG" secondAttribute="centerX" multiplier="0.65" id="Uz5-r5-Y2p"/>
+                            <constraint firstItem="XIW-BG-qGS" firstAttribute="centerY" secondItem="cft-Wj-aUG" secondAttribute="centerY" multiplier="1.2" id="WJg-0g-CBz"/>
+                            <constraint firstItem="XIW-BG-qGS" firstAttribute="width" secondItem="cft-Wj-aUG" secondAttribute="width" multiplier="0.2" id="bIT-Gn-dz8"/>
+                            <constraint firstItem="4Xu-m8-PiO" firstAttribute="centerY" secondItem="cft-Wj-aUG" secondAttribute="centerY" multiplier="1.45" id="bxP-Qf-EGn"/>
+                            <constraint firstItem="7k4-Tb-lzk" firstAttribute="height" secondItem="cft-Wj-aUG" secondAttribute="height" multiplier="0.12" id="oFo-zN-l3a"/>
+                            <constraint firstItem="bdH-Tt-tog" firstAttribute="centerX" secondItem="cft-Wj-aUG" secondAttribute="centerX" id="pE0-r9-aaO"/>
+                            <constraint firstItem="fYn-99-xxh" firstAttribute="height" secondItem="cft-Wj-aUG" secondAttribute="height" multiplier="0.23" id="pNJ-3T-IDM"/>
+                            <constraint firstItem="4Xu-m8-PiO" firstAttribute="centerX" secondItem="cft-Wj-aUG" secondAttribute="centerX" multiplier="0.65" id="sLc-zu-Kqj"/>
+                            <constraint firstItem="7k4-Tb-lzk" firstAttribute="centerY" secondItem="cft-Wj-aUG" secondAttribute="centerY" multiplier="0.8" id="tFg-pW-o8q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lCS-XT-7fr"/>
@@ -717,7 +717,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7qk-OV-7ui" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4652" y="1067"/>
+            <point key="canvasLocation" x="4652" y="1066.4167916041979"/>
         </scene>
         <!--Network Health CheckVC2-->
         <scene sceneID="8Qq-he-GHV">
@@ -730,12 +730,100 @@
                     <view key="view" contentMode="scaleToFill" id="VSM-uP-GOf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wifi_ban" translatesAutoresizingMaskIntoConstraints="NO" id="rKa-p6-6ij">
+                                <frame key="frameInset" minX="75" minY="100" width="225" height="134"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nB-df-QYx">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NtH-at-wm4">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="ATr-r0-fRx">
+                                                <frame key="frameInset" minX="16" minY="41" width="14" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="250" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qe-bR-P86">
+                                                <frame key="frameInset" minX="35" minY="19" width="77" height="49"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                                <color key="textColor" red="1" green="0.59607843140000005" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mbps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lfB-GD-ff0">
+                                                <frame key="frameInset" minX="116" minY="41" width="57" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.59607843140000005" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Download speed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAd-gt-IlF">
+                                                <frame key="frameInset" minX="35" minY="75" width="138" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.59607843140000005" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eT-jp-EHp">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="upload" translatesAutoresizingMaskIntoConstraints="NO" id="IuV-5D-qjd">
+                                                <frame key="frameInset" minX="16" minY="41" width="14" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9Z-uv-zf3">
+                                                <frame key="frameInset" minX="35" minY="19" width="77" height="49"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                                <color key="textColor" red="1" green="0.59607843140000005" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mbps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKw-bb-js6">
+                                                <frame key="frameInset" minX="116" minY="41" width="57" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.59607843140000005" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload speed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzC-iq-ox1">
+                                                <frame key="frameInset" minX="35" minY="75" width="138" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.59607843140000005" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="6eT-jp-EHp" firstAttribute="width" secondItem="4nB-df-QYx" secondAttribute="width" multiplier="0.5" id="00L-qT-D17"/>
+                                    <constraint firstItem="6eT-jp-EHp" firstAttribute="bottom" secondItem="NtH-at-wm4" secondAttribute="bottom" id="5JQ-7Q-tbx"/>
+                                    <constraint firstAttribute="bottom" secondItem="6eT-jp-EHp" secondAttribute="bottom" constant="-5" id="Qgi-j0-MIe"/>
+                                    <constraint firstItem="6eT-jp-EHp" firstAttribute="top" secondItem="NtH-at-wm4" secondAttribute="top" id="RJU-Vt-PZf"/>
+                                    <constraint firstItem="6eT-jp-EHp" firstAttribute="width" secondItem="NtH-at-wm4" secondAttribute="width" id="RYS-cN-U0V"/>
+                                    <constraint firstItem="NtH-at-wm4" firstAttribute="leading" secondItem="4nB-df-QYx" secondAttribute="leading" id="YR2-Y1-qyh"/>
+                                    <constraint firstItem="6eT-jp-EHp" firstAttribute="top" secondItem="4nB-df-QYx" secondAttribute="top" id="phQ-nR-0Je"/>
+                                    <constraint firstAttribute="trailing" secondItem="6eT-jp-EHp" secondAttribute="trailing" id="vaf-JD-mqm"/>
+                                    <constraint firstItem="NtH-at-wm4" firstAttribute="width" secondItem="4nB-df-QYx" secondAttribute="width" multiplier="0.5" id="xqS-ne-Nbb"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4nB-df-QYx" firstAttribute="centerX" secondItem="VSM-uP-GOf" secondAttribute="centerX" id="4cD-X6-NNS"/>
+                            <constraint firstItem="4nB-df-QYx" firstAttribute="centerY" secondItem="VSM-uP-GOf" secondAttribute="centerY" multiplier="1.15" id="UzX-Ez-fAP"/>
+                            <constraint firstItem="4nB-df-QYx" firstAttribute="height" secondItem="VSM-uP-GOf" secondAttribute="height" multiplier="0.15" id="meh-uB-4hc"/>
+                            <constraint firstItem="4nB-df-QYx" firstAttribute="width" secondItem="VSM-uP-GOf" secondAttribute="width" multiplier="0.9" id="wUr-ZG-Kiw"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRh-dx-Rbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5603" y="1053"/>
+            <point key="canvasLocation" x="5602.3999999999996" y="1052.0239880059971"/>
         </scene>
         <!--MainNC-->
         <scene sceneID="csl-yB-rQI">
@@ -776,17 +864,22 @@
         </scene>
     </scenes>
     <resources>
+        <image name="5device" width="107" height="107"/>
         <image name="background" width="750" height="1334"/>
-        <image name="chain" width="60" height="56"/>
+        <image name="chain" width="107" height="107"/>
         <image name="divider" width="750" height="21"/>
-        <image name="earth" width="66" height="65"/>
+        <image name="down_divider" width="217" height="217"/>
+        <image name="download" width="29" height="38"/>
+        <image name="earth" width="107" height="107"/>
         <image name="icon_email" width="41" height="36"/>
         <image name="icon_password" width="41" height="45"/>
         <image name="icon_username" width="41" height="38"/>
         <image name="key" width="41" height="39"/>
-        <image name="orange_circle" width="107" height="106"/>
         <image name="polygon" width="154" height="179"/>
+        <image name="up_divider" width="218" height="225"/>
+        <image name="upload" width="26" height="37"/>
         <image name="wifi" width="44" height="36"/>
+        <image name="wifi_ban" width="303" height="220"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Q5f-zX-mre"/>
