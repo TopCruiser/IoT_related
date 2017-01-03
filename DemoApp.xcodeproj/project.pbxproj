@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC30ED5C1E1BCF3F006BAAB9 /* FilteringVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC30ED5B1E1BCF3E006BAAB9 /* FilteringVC.swift */; };
+		CC30ED5E1E1BDBC6006BAAB9 /* PriorityDeviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC30ED5D1E1BDBC6006BAAB9 /* PriorityDeviceVC.swift */; };
 		CC3D62A11E13D7CF00EA66BA /* MainNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3D62A01E13D7CF00EA66BA /* MainNC.swift */; };
 		CC42BBF81E14881800496329 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42BBF71E14881800496329 /* SignupVC.swift */; };
 		CC4433051E1411E40040F638 /* TJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4433041E1411E40040F638 /* TJTextField.swift */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC30ED5B1E1BCF3E006BAAB9 /* FilteringVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteringVC.swift; sourceTree = "<group>"; };
+		CC30ED5D1E1BDBC6006BAAB9 /* PriorityDeviceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityDeviceVC.swift; sourceTree = "<group>"; };
 		CC3D62A01E13D7CF00EA66BA /* MainNC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNC.swift; sourceTree = "<group>"; };
 		CC42BBF71E14881800496329 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		CC4433041E1411E40040F638 /* TJTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TJTextField.swift; path = CustomControls/TJTextField.swift; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 				CCC68FFC1E160268003B2B16 /* YellowNC.swift */,
 				CEF1A0731E13144200D2B789 /* SplashVC.swift */,
 				CEF1A0751E13144200D2B789 /* Main.storyboard */,
+				CC30ED5D1E1BDBC6006BAAB9 /* PriorityDeviceVC.swift */,
+				CC30ED5B1E1BCF3E006BAAB9 /* FilteringVC.swift */,
 				CCC6900E1E16AC89003B2B16 /* SideMenuTableVC.swift */,
 				CEF1A0851E1329C600D2B789 /* LoginVC.swift */,
 				CC42BBF71E14881800496329 /* SignupVC.swift */,
@@ -205,6 +211,7 @@
 				CC3D62A11E13D7CF00EA66BA /* MainNC.swift in Sources */,
 				CEF1A0741E13144200D2B789 /* SplashVC.swift in Sources */,
 				CCC6900F1E16AC89003B2B16 /* SideMenuTableVC.swift in Sources */,
+				CC30ED5E1E1BDBC6006BAAB9 /* PriorityDeviceVC.swift in Sources */,
 				CEF1A08A1E132A6300D2B789 /* SystemReadyVC.swift in Sources */,
 				CEF1A0881E132A1100D2B789 /* CreateNetworkVC.swift in Sources */,
 				CCC6900A1E169AD9003B2B16 /* SideMenuManager.swift in Sources */,
@@ -218,6 +225,7 @@
 				CCC68FFD1E160268003B2B16 /* YellowNC.swift in Sources */,
 				CCC6900D1E169AD9003B2B16 /* UITableViewVibrantCell.swift in Sources */,
 				CEF1A08E1E132B7600D2B789 /* NetworkHealthCheckVC2.swift in Sources */,
+				CC30ED5C1E1BCF3F006BAAB9 /* FilteringVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

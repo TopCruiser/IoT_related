@@ -8,7 +8,7 @@
 
 import UIKit
 
-let viewControllers = ["DevicesAndUsersShow", "NetworkHealthCheckShow", "", ""]
+let viewControllers = ["DevicesAndUsersShow", "NetworkHealthCheckShow", "", "FilteringShow", "PriorityDeviceShow"]
 
 class SideMenuTableVC: UITableViewController {
 

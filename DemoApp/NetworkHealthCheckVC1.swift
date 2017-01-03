@@ -16,12 +16,18 @@ class NetworkHealthCheckVC1: UIViewController {
         self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green:255/255, blue:255/255, alpha:1)
         // Do any additional setup after loading the view.
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "left_sidemenu_button.png")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal), style: UIBarButtonItemStyle.plain, target: self, action: #selector(showSideMenu))
+        self.navigationItem.title = "Network Health Check"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor(red: 255/255, green:152/255, blue:31/255, alpha:1)]
         
         //Initialize parameters with which controls SideMenu...
         let modes:[SideMenuManager.MenuPresentMode] = [.menuSlideIn, .viewSlideOut, .viewSlideInOut, .menuDissolveIn]
         SideMenuManager.menuPresentMode = modes[0]
         SideMenuManager.menuBlurEffectStyle = nil
         // Do any additional setup after loading the view.
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(showNextViewController))
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.left
+        self.view .addGestureRecognizer(swipeLeft)
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +37,10 @@ class NetworkHealthCheckVC1: UIViewController {
     
     func showSideMenu() {
         self.performSegue(withIdentifier: "SideMenuShow", sender: self)
+    }
+    
+    func showNextViewController() {
+        self.performSegue(withIdentifier: "NetworkHealthCheckShowSwipeLeft", sender: self)
     }
     /*
     // MARK: - Navigation
