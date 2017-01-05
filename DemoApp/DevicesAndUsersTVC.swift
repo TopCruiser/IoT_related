@@ -1,25 +1,20 @@
 //
-//  SideMenuTableVC.swift
+//  DevicesAndUsersTVC.swift
 //  DemoApp
 //
-//  Created by Foni Rewenig on 12/30/16.
-//  Copyright © 2016 user. All rights reserved.
+//  Created by Foni Rewenig on 1/4/17.
+//  Copyright © 2017 user. All rights reserved.
 //
 
 import UIKit
 
-let viewControllers = ["DevicesAndUsersShow", "NetworkHealthCheckShow", "", "FilteringShow", "PriorityDeviceShow", "ControlIoTShow", "NotificationsShow"]
+let titlesArray = ["Madison's Tablet", "Madison's Phone"]
 
-class SideMenuTableVC: UITableViewController {
+class DevicesAndUsersTVC: UITableViewController {
 
-    let sideMenuItems = ["Devices and Users",
-                         "Network Health Check",
-                         "Guest Access",
-                         "Filtering",
-                         "Priority",
-                         "Control IoT Devices",
-                         "Notifications",
-                         "Log out"]
+    @IBOutlet weak var topView: UIView!
+    
+    var button : PlayPauseButton! = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,17 +24,32 @@ class SideMenuTableVC: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.tableView.separatorColor = UIColor(red: 255/255, green: 173/255, blue: 80/255, alpha: 1)
-        self.tableView.isScrollEnabled = false
-        self.navigationController?.navigationBar.isHidden = false
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green: 151/255, blue: 31/255, alpha: 1)
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green:255/255, blue:255/255, alpha:1)
+        // Do any additional setup after loading the view.
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "left_sidemenu_button.png")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal), style: UIBarButtonItemStyle.plain, target: self, action: #selector(showSideMenu))
+        self.navigationItem.title = "Devices and Users"
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor(red: 255/255, green:152/255, blue:31/255, alpha:1)]
         
-        self.view.backgroundColor = UIColor.clear
-        let gradientLayer : CAGradientLayer = CAGradientLayer()
-        gradientLayer.frame = self.view.bounds
-        let arrayColors:Array<AnyObject> = [UIColor(red: 255/255, green: 151/255, blue: 31/255, alpha: 1).cgColor, UIColor(red: 255/255, green: 121/255, blue: 1/255, alpha: 1).cgColor]
-        gradientLayer.colors = arrayColors
-        self.view.layer.insertSublayer(gradientLayer, at: 0)
+        self.tableView.isScrollEnabled = false
+        
+        //self.topView.addConstraint(NSLayoutConstraint(item: self.topView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: self.tableView, attribute: NSLayoutAttribute.height, multiplier: 0.3, constant: 0))
+        self.topView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height * CGFloat(0.3))
+        
+        var winSize = self.topView.frame.size
+        //self.button = PlayPauseButton(frame: CGRect(x: winSize.width / 2, y: winSize.height / 3, width: winSize.width / 8, height: winSize.width / 8))
+        self.button = PlayPauseButton(frame: CGRect(x: 0, y: 0, width: winSize.width / 7, height: winSize.width / 7))
+        self.button.backgroundColor = UIColor(red: 255/255, green: 152/255, blue: 31/255, alpha: 1)
+        self.button.center = CGPoint(x: winSize.width / 2, y: winSize.height / 3)
+        self.button.clipsToBounds = true;
+        
+        //half of the width
+        self.button.layer.cornerRadius = 25
+        self.button.layer.borderColor = UIColor.clear.cgColor
+        self.button.layer.borderWidth=2.0;
+        
+        self.button.addTarget(self, action: #selector(toggle(_:)), for:.touchUpInside)
+        
+        self.topView.addSubview(button)
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,6 +57,14 @@ class SideMenuTableVC: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func showSideMenu() {
+        self.performSegue(withIdentifier: "SideMenuShow", sender: self)
+    }
+    
+    func toggle(_ sender: AnyObject!) {
+        self.button.showsMenu = !self.button.showsMenu
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -56,38 +74,22 @@ class SideMenuTableVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return sideMenuItems.count
+        return 2
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SideMenuCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DeviceCell
 
         // Configure the cell...
-        cell.textLabel?.text = sideMenuItems[indexPath.row]
-        cell.textLabel?.textColor = UIColor.white
-        cell.textLabel?.textAlignment = NSTextAlignment.center
-        
-        cell.selectionStyle = UITableViewCellSelectionStyle.none
+        cell.title.text = titlesArray[indexPath.row]
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SideMenuCell", for: indexPath)
-        
-        for index in 0..<tableView.numberOfRows(inSection: 0){
-            let other = tableView.cellForRow(at: NSIndexPath(row: index, section: 0) as IndexPath)
-            if indexPath.row != index {
-                other?.backgroundColor = UIColor.clear
-            }
-            else {
-                other?.backgroundColor = UIColor(red: 255/255, green: 173/255, blue: 80/255, alpha: 1)
-                self.performSegue(withIdentifier: viewControllers[index], sender: self)
-            }
-        }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.view.bounds.height / 8
     }
-    
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

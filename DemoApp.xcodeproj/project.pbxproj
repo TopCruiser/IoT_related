@@ -8,7 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		CC30ED5C1E1BCF3F006BAAB9 /* FilteringVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC30ED5B1E1BCF3E006BAAB9 /* FilteringVC.swift */; };
-		CC30ED5E1E1BDBC6006BAAB9 /* PriorityDeviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC30ED5D1E1BDBC6006BAAB9 /* PriorityDeviceVC.swift */; };
+		CC30ED601E1BE7DB006BAAB9 /* PriorityDeviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC30ED5F1E1BE7DB006BAAB9 /* PriorityDeviceVC.swift */; };
+		CC30ED641E1BF5EC006BAAB9 /* PriorityDeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC30ED631E1BF5EC006BAAB9 /* PriorityDeviceCell.swift */; };
+		CC30ED661E1D2DC2006BAAB9 /* PlayPauseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC30ED651E1D2DC2006BAAB9 /* PlayPauseButton.swift */; };
+		CC30ED6A1E1D3B94006BAAB9 /* DevicesAndUsersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC30ED691E1D3B94006BAAB9 /* DevicesAndUsersTVC.swift */; };
+		CC30ED6C1E1D749D006BAAB9 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC30ED6B1E1D749D006BAAB9 /* DeviceCell.swift */; };
+		CC30ED6E1E1D7AD1006BAAB9 /* ControlIoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC30ED6D1E1D7AD1006BAAB9 /* ControlIoTVC.swift */; };
+		CC30ED701E1D81D0006BAAB9 /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC30ED6F1E1D81D0006BAAB9 /* NotificationsVC.swift */; };
+		CC30ED721E1D8397006BAAB9 /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC30ED711E1D8397006BAAB9 /* NotificationCell.swift */; };
 		CC3D62A11E13D7CF00EA66BA /* MainNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3D62A01E13D7CF00EA66BA /* MainNC.swift */; };
 		CC42BBF81E14881800496329 /* SignupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42BBF71E14881800496329 /* SignupVC.swift */; };
 		CC4433051E1411E40040F638 /* TJTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4433041E1411E40040F638 /* TJTextField.swift */; };
@@ -34,7 +41,14 @@
 
 /* Begin PBXFileReference section */
 		CC30ED5B1E1BCF3E006BAAB9 /* FilteringVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteringVC.swift; sourceTree = "<group>"; };
-		CC30ED5D1E1BDBC6006BAAB9 /* PriorityDeviceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityDeviceVC.swift; sourceTree = "<group>"; };
+		CC30ED5F1E1BE7DB006BAAB9 /* PriorityDeviceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityDeviceVC.swift; sourceTree = "<group>"; };
+		CC30ED631E1BF5EC006BAAB9 /* PriorityDeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PriorityDeviceCell.swift; path = CustomControls/PriorityDeviceCell.swift; sourceTree = "<group>"; };
+		CC30ED651E1D2DC2006BAAB9 /* PlayPauseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayPauseButton.swift; path = CustomControls/PlayPauseButton.swift; sourceTree = "<group>"; };
+		CC30ED691E1D3B94006BAAB9 /* DevicesAndUsersTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevicesAndUsersTVC.swift; sourceTree = "<group>"; };
+		CC30ED6B1E1D749D006BAAB9 /* DeviceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DeviceCell.swift; path = CustomControls/DeviceCell.swift; sourceTree = "<group>"; };
+		CC30ED6D1E1D7AD1006BAAB9 /* ControlIoTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlIoTVC.swift; sourceTree = "<group>"; };
+		CC30ED6F1E1D81D0006BAAB9 /* NotificationsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
+		CC30ED711E1D8397006BAAB9 /* NotificationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NotificationCell.swift; path = CustomControls/NotificationCell.swift; sourceTree = "<group>"; };
 		CC3D62A01E13D7CF00EA66BA /* MainNC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNC.swift; sourceTree = "<group>"; };
 		CC42BBF71E14881800496329 /* SignupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupVC.swift; sourceTree = "<group>"; };
 		CC4433041E1411E40040F638 /* TJTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TJTextField.swift; path = CustomControls/TJTextField.swift; sourceTree = "<group>"; };
@@ -76,6 +90,10 @@
 			children = (
 				CCC690041E169ACE003B2B16 /* SideMenu */,
 				CC4433041E1411E40040F638 /* TJTextField.swift */,
+				CC30ED631E1BF5EC006BAAB9 /* PriorityDeviceCell.swift */,
+				CC30ED651E1D2DC2006BAAB9 /* PlayPauseButton.swift */,
+				CC30ED6B1E1D749D006BAAB9 /* DeviceCell.swift */,
+				CC30ED711E1D8397006BAAB9 /* NotificationCell.swift */,
 			);
 			name = CustomControls;
 			sourceTree = "<group>";
@@ -117,8 +135,11 @@
 				CCC68FFC1E160268003B2B16 /* YellowNC.swift */,
 				CEF1A0731E13144200D2B789 /* SplashVC.swift */,
 				CEF1A0751E13144200D2B789 /* Main.storyboard */,
-				CC30ED5D1E1BDBC6006BAAB9 /* PriorityDeviceVC.swift */,
+				CC30ED6F1E1D81D0006BAAB9 /* NotificationsVC.swift */,
+				CC30ED6D1E1D7AD1006BAAB9 /* ControlIoTVC.swift */,
+				CC30ED691E1D3B94006BAAB9 /* DevicesAndUsersTVC.swift */,
 				CC30ED5B1E1BCF3E006BAAB9 /* FilteringVC.swift */,
+				CC30ED5F1E1BE7DB006BAAB9 /* PriorityDeviceVC.swift */,
 				CCC6900E1E16AC89003B2B16 /* SideMenuTableVC.swift */,
 				CEF1A0851E1329C600D2B789 /* LoginVC.swift */,
 				CC42BBF71E14881800496329 /* SignupVC.swift */,
@@ -211,18 +232,25 @@
 				CC3D62A11E13D7CF00EA66BA /* MainNC.swift in Sources */,
 				CEF1A0741E13144200D2B789 /* SplashVC.swift in Sources */,
 				CCC6900F1E16AC89003B2B16 /* SideMenuTableVC.swift in Sources */,
-				CC30ED5E1E1BDBC6006BAAB9 /* PriorityDeviceVC.swift in Sources */,
+				CC30ED721E1D8397006BAAB9 /* NotificationCell.swift in Sources */,
+				CC30ED601E1BE7DB006BAAB9 /* PriorityDeviceVC.swift in Sources */,
 				CEF1A08A1E132A6300D2B789 /* SystemReadyVC.swift in Sources */,
 				CEF1A0881E132A1100D2B789 /* CreateNetworkVC.swift in Sources */,
 				CCC6900A1E169AD9003B2B16 /* SideMenuManager.swift in Sources */,
 				CEF1A08C1E132AFE00D2B789 /* NetworkHealthCheckVC1.swift in Sources */,
+				CC30ED6A1E1D3B94006BAAB9 /* DevicesAndUsersTVC.swift in Sources */,
+				CC30ED6C1E1D749D006BAAB9 /* DeviceCell.swift in Sources */,
+				CC30ED641E1BF5EC006BAAB9 /* PriorityDeviceCell.swift in Sources */,
 				CEF1A0841E1328C600D2B789 /* LoginSignUpVC.swift in Sources */,
 				CEF1A0861E1329C600D2B789 /* LoginVC.swift in Sources */,
 				CC4433051E1411E40040F638 /* TJTextField.swift in Sources */,
 				CEF1A0721E13144200D2B789 /* AppDelegate.swift in Sources */,
 				CC42BBF81E14881800496329 /* SignupVC.swift in Sources */,
 				CCC6900C1E169AD9003B2B16 /* UISideMenuNavigationController.swift in Sources */,
+				CC30ED661E1D2DC2006BAAB9 /* PlayPauseButton.swift in Sources */,
+				CC30ED6E1E1D7AD1006BAAB9 /* ControlIoTVC.swift in Sources */,
 				CCC68FFD1E160268003B2B16 /* YellowNC.swift in Sources */,
+				CC30ED701E1D81D0006BAAB9 /* NotificationsVC.swift in Sources */,
 				CCC6900D1E169AD9003B2B16 /* UITableViewVibrantCell.swift in Sources */,
 				CEF1A08E1E132B7600D2B789 /* NetworkHealthCheckVC2.swift in Sources */,
 				CC30ED5C1E1BCF3F006BAAB9 /* FilteringVC.swift in Sources */,
