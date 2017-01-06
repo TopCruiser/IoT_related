@@ -35,7 +35,7 @@ class DevicesAndUsersTVC: UITableViewController {
         //self.topView.addConstraint(NSLayoutConstraint(item: self.topView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: self.tableView, attribute: NSLayoutAttribute.height, multiplier: 0.3, constant: 0))
         self.topView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height * CGFloat(0.3))
         
-        var winSize = self.topView.frame.size
+        let winSize = self.topView.frame.size
         //self.button = PlayPauseButton(frame: CGRect(x: winSize.width / 2, y: winSize.height / 3, width: winSize.width / 8, height: winSize.width / 8))
         self.button = PlayPauseButton(frame: CGRect(x: 0, y: 0, width: winSize.width / 7, height: winSize.width / 7))
         self.button.backgroundColor = UIColor(red: 255/255, green: 152/255, blue: 31/255, alpha: 1)

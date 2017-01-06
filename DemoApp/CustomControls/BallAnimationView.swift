@@ -1,7 +1,7 @@
 //
 //  BallAnimationView.swift
 //
-//  Code generated using QuartzCode 1.55.0 on 1/5/17.
+//  Code generated using QuartzCode 1.55.0 on 1/6/17.
 //  www.quartzcodeapp.com
 //
 
@@ -31,7 +31,17 @@ class BallAnimationView: UIView, CAAnimationDelegate {
         setupLayers()
     }
     
+    override var frame: CGRect{
+        didSet{
+            setupLayerFrames()
+        }
+    }
     
+    override var bounds: CGRect{
+        didSet{
+            setupLayerFrames()
+        }
+    }
     
     func setupProperties(){
         
@@ -39,24 +49,27 @@ class BallAnimationView: UIView, CAAnimationDelegate {
     
     func setupLayers(){
         let rectangle = CAShapeLayer()
-        rectangle.frame = CGRect(x: 15.5, y: 71.5, width: 69, height: 24)
-        rectangle.path = rectanglePath().cgPath
         self.layer.addSublayer(rectangle)
         layers["rectangle"] = rectangle
         
         let oval = CAShapeLayer()
-        oval.frame = CGRect(x: 44.5, y: 72, width: 11, height: 11)
-        oval.path = ovalPath().cgPath
         self.layer.addSublayer(oval)
         layers["oval"] = oval
         
-        let oval2 = CAShapeLayer()
-        oval2.frame = CGRect(x: 42, y: 69, width: 16, height: 4)
-        oval2.path = oval2Path().cgPath
-        self.layer.addSublayer(oval2)
-        layers["oval2"] = oval2
+        let ball = CAShapeLayer()
+        self.layer.addSublayer(ball)
+        layers["ball"] = ball
+        
+        let polygon = CALayer()
+        self.layer.addSublayer(polygon)
+        layers["polygon"] = polygon
+        
+        let eclipse = CAShapeLayer()
+        self.layer.addSublayer(eclipse)
+        layers["eclipse"] = eclipse
         
         resetLayerProperties(forLayerIdentifiers: nil)
+        setupLayerFrames()
     }
     
     func resetLayerProperties(forLayerIdentifiers layerIds: [String]!){
@@ -65,18 +78,58 @@ class BallAnimationView: UIView, CAAnimationDelegate {
         
         if layerIds == nil || layerIds.contains("rectangle"){
             let rectangle = layers["rectangle"] as! CAShapeLayer
-            rectangle.fillColor   = UIColor(red:1, green: 0.925, blue:0.0392, alpha:1).cgColor
-            rectangle.strokeColor = UIColor(red:0.329, green: 0.329, blue:0.329, alpha:1).cgColor
+            rectangle.fillColor   = UIColor(red:1, green: 0.596, blue:0.122, alpha:1).cgColor
+            rectangle.strokeColor = UIColor(red:1, green: 0.596, blue:0.122, alpha:1).cgColor
         }
         if layerIds == nil || layerIds.contains("oval"){
             let oval = layers["oval"] as! CAShapeLayer
-            oval.fillColor   = UIColor(red:0.996, green: 0.996, blue:0.0392, alpha:1).cgColor
-            oval.strokeColor = UIColor.yellow.cgColor
+            oval.fillColor   = UIColor(red:1, green: 0.596, blue:0.122, alpha:1).cgColor
+            oval.strokeColor = UIColor(red:1, green: 0.596, blue:0.122, alpha:1).cgColor
         }
-        if layerIds == nil || layerIds.contains("oval2"){
-            let oval2 = layers["oval2"] as! CAShapeLayer
-            oval2.fillColor   = UIColor.yellow.cgColor
-            oval2.strokeColor = UIColor.yellow.cgColor
+        if layerIds == nil || layerIds.contains("ball"){
+            let ball = layers["ball"] as! CAShapeLayer
+            ball.fillColor   = UIColor(red:1, green: 0.596, blue:0.122, alpha:1).cgColor
+            ball.strokeColor = UIColor(red:1, green: 0.596, blue:0.122, alpha:1).cgColor
+        }
+        if layerIds == nil || layerIds.contains("polygon"){
+            let polygon = layers["polygon"] as! CALayer
+            polygon.contents = UIImage(named:"polygon")?.cgImage
+        }
+        if layerIds == nil || layerIds.contains("eclipse"){
+            let eclipse = layers["eclipse"] as! CAShapeLayer
+            eclipse.fillColor   = UIColor(red:1, green: 0.596, blue:0.122, alpha:1).cgColor
+            eclipse.strokeColor = UIColor(red:1, green: 0.596, blue:0.122, alpha:1).cgColor
+        }
+        
+        CATransaction.commit()
+    }
+    
+    func setupLayerFrames(){
+        CATransaction.begin()
+        CATransaction.setDisableActions(true)
+        
+        if let rectangle : CAShapeLayer = layers["rectangle"] as? CAShapeLayer{
+            rectangle.frame = CGRect(x: -0.00133 * rectangle.superlayer!.bounds.width, y: 0.64596 * rectangle.superlayer!.bounds.height, width:  rectangle.superlayer!.bounds.width, height: 0.38024 * rectangle.superlayer!.bounds.height)
+            rectangle.path  = rectanglePath(bounds: (layers["rectangle"] as! CAShapeLayer).bounds).cgPath
+        }
+        
+        if let oval : CAShapeLayer = layers["oval"] as? CAShapeLayer{
+            oval.frame = CGRect(x: 0.4423 * oval.superlayer!.bounds.width, y: 0.25429 * oval.superlayer!.bounds.height, width: 0.11539 * oval.superlayer!.bounds.width, height: 0.06495 * oval.superlayer!.bounds.height)
+            oval.path  = ovalPath(bounds: (layers["oval"] as! CAShapeLayer).bounds).cgPath
+        }
+        
+        if let ball : CAShapeLayer = layers["ball"] as? CAShapeLayer{
+            ball.frame = CGRect(x: 0.4423 * ball.superlayer!.bounds.width, y: 0.68468 * ball.superlayer!.bounds.height, width: 0.11539 * ball.superlayer!.bounds.width, height: 0.06495 * ball.superlayer!.bounds.height)
+            ball.path  = ballPath(bounds: (layers["ball"] as! CAShapeLayer).bounds).cgPath
+        }
+        
+        if let polygon : CALayer = layers["polygon"] as? CALayer{
+            polygon.frame = CGRect(x: 0.39628 * polygon.superlayer!.bounds.width, y: 0.22089 * polygon.superlayer!.bounds.height, width: 0.20479 * polygon.superlayer!.bounds.width, height: 0.13174 * polygon.superlayer!.bounds.height)
+        }
+        
+        if let eclipse : CAShapeLayer = layers["eclipse"] as? CAShapeLayer{
+            eclipse.frame = CGRect(x: 0.39694 * eclipse.superlayer!.bounds.width, y: 0.6399 * eclipse.superlayer!.bounds.height, width: 0.21011 * eclipse.superlayer!.bounds.width, height: 0.03144 * eclipse.superlayer!.bounds.height)
+            eclipse.path  = eclipsePath(bounds: (layers["eclipse"] as! CAShapeLayer).bounds).cgPath
         }
         
         CATransaction.commit()
@@ -84,52 +137,93 @@ class BallAnimationView: UIView, CAAnimationDelegate {
     
     //MARK: - Animation Setup
     
-    func addUntitled1Animation(completionBlock: ((_ finished: Bool) -> Void)? = nil){
+    func addRisingAnimation(completionBlock: ((_ finished: Bool) -> Void)? = nil){
         if completionBlock != nil{
             let completionAnim = CABasicAnimation(keyPath:"completionAnim")
-            completionAnim.duration = 1.384
+            completionAnim.duration = 1.408
             completionAnim.delegate = self
-            completionAnim.setValue("Untitled1", forKey:"animId")
+            completionAnim.setValue("Rising", forKey:"animId")
             completionAnim.setValue(false, forKey:"needEndAnim")
-            layer.add(completionAnim, forKey:"Untitled1")
-            if let anim = layer.animation(forKey: "Untitled1"){
+            layer.add(completionAnim, forKey:"Rising")
+            if let anim = layer.animation(forKey: "Rising"){
                 completionBlocks[anim] = completionBlock
             }
         }
         
         let fillMode : String = kCAFillModeForwards
         
+        let oval = layers["oval"] as! CAShapeLayer
+        
         ////Oval animation
         let ovalPositionAnim      = CAKeyframeAnimation(keyPath:"position")
-        ovalPositionAnim.values   = [NSValue(cgPoint: CGPoint(x: 50, y: 77.5)), NSValue(cgPoint: CGPoint(x: 50, y: 0))]
+        ovalPositionAnim.values   = [NSValue(cgPoint: CGPoint(x: 0.5 * oval.superlayer!.bounds.width, y: 0.28676 * oval.superlayer!.bounds.height)), NSValue(cgPoint: CGPoint(x: 0.5 * oval.superlayer!.bounds.width, y: 0.28676 * oval.superlayer!.bounds.height))]
         ovalPositionAnim.keyTimes = [0, 1]
-        ovalPositionAnim.duration = 1.38
+        ovalPositionAnim.duration = 1
         
         let ovalTransformAnim       = CAKeyframeAnimation(keyPath:"transform")
         ovalTransformAnim.values    = [NSValue(caTransform3D: CATransform3DIdentity),
-                                       NSValue(caTransform3D: CATransform3DIdentity)]
+                                       NSValue(caTransform3D: CATransform3DMakeScale(0, 0, 0))]
         ovalTransformAnim.keyTimes  = [0, 1]
-        ovalTransformAnim.duration  = 1.3
-        ovalTransformAnim.beginTime = 0.0827
+        ovalTransformAnim.duration  = 0.162
+        ovalTransformAnim.beginTime = 1
         
-        let ovalUntitled1Anim : CAAnimationGroup = QCMethod.group(animations: [ovalPositionAnim, ovalTransformAnim], fillMode:fillMode)
-        layers["oval"]?.add(ovalUntitled1Anim, forKey:"ovalUntitled1Anim")
+        let ovalRisingAnim : CAAnimationGroup = QCMethod.group(animations: [ovalPositionAnim, ovalTransformAnim], fillMode:fillMode)
+        oval.add(ovalRisingAnim, forKey:"ovalRisingAnim")
         
-        ////Oval2 animation
-        let oval2TransformAnim      = CAKeyframeAnimation(keyPath:"transform")
-        oval2TransformAnim.values   = [NSValue(caTransform3D: CATransform3DIdentity),
-                                       NSValue(caTransform3D: CATransform3DMakeScale(0.5, 1.5, 1))]
-        oval2TransformAnim.keyTimes = [0, 1]
-        oval2TransformAnim.duration = 0.329
+        let ball = layers["ball"] as! CAShapeLayer
         
-        let oval2PositionAnim       = CAKeyframeAnimation(keyPath:"position")
-        oval2PositionAnim.values    = [NSValue(cgPoint: CGPoint(x: 50, y: 71)), NSValue(cgPoint: CGPoint(x: 50, y: 80))]
-        oval2PositionAnim.keyTimes  = [0, 1]
-        oval2PositionAnim.duration  = 0.127
-        oval2PositionAnim.beginTime = 0.281
+        ////Ball animation
+        let ballPositionAnim      = CAKeyframeAnimation(keyPath:"position")
+        ballPositionAnim.values   = [NSValue(cgPoint: CGPoint(x: 0.5 * ball.superlayer!.bounds.width, y: 0.71715 * ball.superlayer!.bounds.height)), NSValue(cgPoint: CGPoint(x: 0.5 * ball.superlayer!.bounds.width, y: 0.28668 * ball.superlayer!.bounds.height))]
+        ballPositionAnim.keyTimes = [0, 1]
+        ballPositionAnim.duration = 1
         
-        let oval2Untitled1Anim : CAAnimationGroup = QCMethod.group(animations: [oval2TransformAnim, oval2PositionAnim], fillMode:fillMode)
-        layers["oval2"]?.add(oval2Untitled1Anim, forKey:"oval2Untitled1Anim")
+        let ballTransformAnim       = CAKeyframeAnimation(keyPath:"transform")
+        ballTransformAnim.values    = [NSValue(caTransform3D: CATransform3DIdentity),
+                                       NSValue(caTransform3D: CATransform3DMakeScale(0, 0, 0))]
+        ballTransformAnim.keyTimes  = [0, 1]
+        ballTransformAnim.duration  = 0.162
+        ballTransformAnim.beginTime = 1
+        
+        let ballRisingAnim : CAAnimationGroup = QCMethod.group(animations: [ballPositionAnim, ballTransformAnim], fillMode:fillMode)
+        ball.add(ballRisingAnim, forKey:"ballRisingAnim")
+        
+        let polygon = layers["polygon"] as! CALayer
+        
+        ////Polygon animation
+        let polygonTransformAnim       = CAKeyframeAnimation(keyPath:"transform")
+        polygonTransformAnim.values    = [NSValue(caTransform3D: CATransform3DMakeScale(0, 0, 1)),
+                                          NSValue(caTransform3D: CATransform3DMakeRotation(CGFloat(2 * M_PI), 0, 0, -1))]
+        polygonTransformAnim.keyTimes  = [0, 1]
+        polygonTransformAnim.duration  = 0.603
+        polygonTransformAnim.beginTime = 0.798
+        
+        let polygonOpacityAnim      = CAKeyframeAnimation(keyPath:"opacity")
+        polygonOpacityAnim.values   = [0, 0, 1]
+        polygonOpacityAnim.keyTimes = [0, 0.566, 1]
+        polygonOpacityAnim.duration = 1.41
+        
+        let polygonRisingAnim : CAAnimationGroup = QCMethod.group(animations: [polygonTransformAnim, polygonOpacityAnim], fillMode:fillMode)
+        polygon.add(polygonRisingAnim, forKey:"polygonRisingAnim")
+        
+        let eclipse = layers["eclipse"] as! CAShapeLayer
+        
+        ////Eclipse animation
+        let eclipseTransformAnim       = CAKeyframeAnimation(keyPath:"transform")
+        eclipseTransformAnim.values    = [NSValue(caTransform3D: CATransform3DIdentity),
+                                          NSValue(caTransform3D: CATransform3DMakeScale(0.5, 1, 1))]
+        eclipseTransformAnim.keyTimes  = [0, 1]
+        eclipseTransformAnim.duration  = 0.238
+        eclipseTransformAnim.beginTime = 0.107
+        
+        let eclipsePositionAnim       = CAKeyframeAnimation(keyPath:"position")
+        eclipsePositionAnim.values    = [NSValue(cgPoint: CGPoint(x: 0.50199 * eclipse.superlayer!.bounds.width, y: 0.66243 * eclipse.superlayer!.bounds.height)), NSValue(cgPoint: CGPoint(x: 0.50199 * eclipse.superlayer!.bounds.width, y: 0.64371 * eclipse.superlayer!.bounds.height)), NSValue(cgPoint: CGPoint(x: 0.50199 * eclipse.superlayer!.bounds.width, y: 0.7485 * eclipse.superlayer!.bounds.height))]
+        eclipsePositionAnim.keyTimes  = [0, 0.286, 1]
+        eclipsePositionAnim.duration  = 0.555
+        eclipsePositionAnim.beginTime = 0.107
+        
+        let eclipseRisingAnim : CAAnimationGroup = QCMethod.group(animations: [eclipseTransformAnim, eclipsePositionAnim], fillMode:fillMode)
+        eclipse.add(eclipseRisingAnim, forKey:"eclipseRisingAnim")
     }
     
     //MARK: - Animation Cleanup
@@ -146,16 +240,20 @@ class BallAnimationView: UIView, CAAnimationDelegate {
     }
     
     func updateLayerValues(forAnimationId identifier: String){
-        if identifier == "Untitled1"{
-            QCMethod.updateValueFromPresentationLayer(forAnimation: (layers["oval"] as! CALayer).animation(forKey: "ovalUntitled1Anim"), theLayer:(layers["oval"] as! CALayer))
-            QCMethod.updateValueFromPresentationLayer(forAnimation: (layers["oval2"] as! CALayer).animation(forKey: "oval2Untitled1Anim"), theLayer:(layers["oval2"] as! CALayer))
+        if identifier == "Rising"{
+            QCMethod.updateValueFromPresentationLayer(forAnimation: (layers["oval"] as! CALayer).animation(forKey: "ovalRisingAnim"), theLayer:(layers["oval"] as! CALayer))
+            QCMethod.updateValueFromPresentationLayer(forAnimation: (layers["ball"] as! CALayer).animation(forKey: "ballRisingAnim"), theLayer:(layers["ball"] as! CALayer))
+            QCMethod.updateValueFromPresentationLayer(forAnimation: (layers["polygon"] as! CALayer).animation(forKey: "polygonRisingAnim"), theLayer:(layers["polygon"] as! CALayer))
+            QCMethod.updateValueFromPresentationLayer(forAnimation: (layers["eclipse"] as! CALayer).animation(forKey: "eclipseRisingAnim"), theLayer:(layers["eclipse"] as! CALayer))
         }
     }
     
     func removeAnimations(forAnimationId identifier: String){
-        if identifier == "Untitled1"{
-            (layers["oval"] as! CALayer).removeAnimation(forKey: "ovalUntitled1Anim")
-            (layers["oval2"] as! CALayer).removeAnimation(forKey: "oval2Untitled1Anim")
+        if identifier == "Rising"{
+            (layers["oval"] as! CALayer).removeAnimation(forKey: "ovalRisingAnim")
+            (layers["ball"] as! CALayer).removeAnimation(forKey: "ballRisingAnim")
+            (layers["polygon"] as! CALayer).removeAnimation(forKey: "polygonRisingAnim")
+            (layers["eclipse"] as! CALayer).removeAnimation(forKey: "eclipseRisingAnim")
         }
     }
     
@@ -167,25 +265,24 @@ class BallAnimationView: UIView, CAAnimationDelegate {
     
     //MARK: - Bezier Path
     
-    func rectanglePath() -> UIBezierPath{
-        let rectanglePath = UIBezierPath(rect:CGRect(x: 0, y: 0, width: 69, height: 24))
+    func rectanglePath(bounds: CGRect) -> UIBezierPath{
+        let rectanglePath = UIBezierPath(rect:bounds)
         return rectanglePath
     }
     
-    func ovalPath() -> UIBezierPath{
-        let ovalPath = UIBezierPath()
-        ovalPath.move(to: CGPoint(x: 5.5, y: 0))
-        ovalPath.addCurve(to: CGPoint(x: 0, y: 5.5), controlPoint1:CGPoint(x: 2.462, y: 0), controlPoint2:CGPoint(x: 0, y: 2.462))
-        ovalPath.addCurve(to: CGPoint(x: 5.5, y: 11), controlPoint1:CGPoint(x: 0, y: 8.538), controlPoint2:CGPoint(x: 2.462, y: 11))
-        ovalPath.addCurve(to: CGPoint(x: 11, y: 5.5), controlPoint1:CGPoint(x: 8.538, y: 11), controlPoint2:CGPoint(x: 11, y: 8.538))
-        ovalPath.addCurve(to: CGPoint(x: 5.5, y: 0), controlPoint1:CGPoint(x: 11, y: 2.462), controlPoint2:CGPoint(x: 8.538, y: 0))
-        
+    func ovalPath(bounds: CGRect) -> UIBezierPath{
+        let ovalPath = UIBezierPath(ovalIn:bounds)
         return ovalPath
     }
     
-    func oval2Path() -> UIBezierPath{
-        let oval2Path = UIBezierPath(ovalIn:CGRect(x: 0, y: 0, width: 16, height: 4))
-        return oval2Path
+    func ballPath(bounds: CGRect) -> UIBezierPath{
+        let ballPath = UIBezierPath(ovalIn:bounds)
+        return ballPath
+    }
+    
+    func eclipsePath(bounds: CGRect) -> UIBezierPath{
+        let eclipsePath = UIBezierPath(ovalIn:bounds)
+        return eclipsePath
     }
     
     

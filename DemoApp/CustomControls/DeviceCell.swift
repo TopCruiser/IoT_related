@@ -18,11 +18,11 @@ class DeviceCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        var winSize = self.contentView.frame.size
+        let winSize = self.contentView.frame.size
         //self.button = PlayPauseButton(frame: CGRect(x: winSize.width / 2, y: winSize.height / 3, width: winSize.width / 8, height: winSize.width / 8))
         self.button = PlayPauseButton(frame: CGRect(x: 0, y: 0, width: winSize.height / 5, height: winSize.height / 5))
         self.button.backgroundColor = UIColor(red: 255/255, green: 152/255, blue: 31/255, alpha: 1)
-        self.button.center = CGPoint(x: winSize.width * CGFloat(0.9), y: winSize.height / 3)
+        self.button.center = CGPoint(x: winSize.width * CGFloat(0.8), y: winSize.height / 3)
         self.button.clipsToBounds = true;
         
         //half of the width

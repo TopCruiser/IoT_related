@@ -10,11 +10,14 @@ import UIKit
 
 class SplashVC: UIViewController {
 
+    @IBOutlet var animView: BallAnimationView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.isHidden = true;
         self.perform(#selector(self.transitToNextViewController), with : nil, afterDelay : 3.0)
+        animView.addRisingAnimation()
     }
 
     override func didReceiveMemoryWarning() {

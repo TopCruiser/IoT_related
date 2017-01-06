@@ -89,6 +89,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC30ED771E1EE3E6006BAAB9 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1A0711E13144200D2B789 /* AppDelegate.swift */,
+				CC3D62A01E13D7CF00EA66BA /* MainNC.swift */,
+				CCC68FFC1E160268003B2B16 /* YellowNC.swift */,
+				CEF1A0731E13144200D2B789 /* SplashVC.swift */,
+				CEF1A0751E13144200D2B789 /* Main.storyboard */,
+				CC30ED6F1E1D81D0006BAAB9 /* NotificationsVC.swift */,
+				CC30ED6D1E1D7AD1006BAAB9 /* ControlIoTVC.swift */,
+				CC30ED691E1D3B94006BAAB9 /* DevicesAndUsersTVC.swift */,
+				CC30ED5B1E1BCF3E006BAAB9 /* FilteringVC.swift */,
+				CC30ED5F1E1BE7DB006BAAB9 /* PriorityDeviceVC.swift */,
+				CCC6900E1E16AC89003B2B16 /* SideMenuTableVC.swift */,
+				CEF1A0851E1329C600D2B789 /* LoginVC.swift */,
+				CC42BBF71E14881800496329 /* SignupVC.swift */,
+				CEF1A08D1E132B7600D2B789 /* NetworkHealthCheckVC2.swift */,
+				CEF1A08B1E132AFE00D2B789 /* NetworkHealthCheckVC1.swift */,
+				CEF1A0891E132A6300D2B789 /* SystemReadyVC.swift */,
+				CEF1A0871E132A1100D2B789 /* CreateNetworkVC.swift */,
+				CEF1A0831E1328C600D2B789 /* LoginSignUpVC.swift */,
+			);
+			name = VCs;
+			sourceTree = "<group>";
+		};
 		CC4433021E1411CC0040F638 /* CustomControls */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,27 +159,10 @@
 		CEF1A0701E13144200D2B789 /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
-				CCC690021E1687D4003B2B16 /* left_sidemenu_button.png */,
+				CC30ED771E1EE3E6006BAAB9 /* VCs */,
 				CC4433021E1411CC0040F638 /* CustomControls */,
-				CEF1A0711E13144200D2B789 /* AppDelegate.swift */,
-				CC3D62A01E13D7CF00EA66BA /* MainNC.swift */,
-				CCC68FFC1E160268003B2B16 /* YellowNC.swift */,
-				CEF1A0731E13144200D2B789 /* SplashVC.swift */,
-				CEF1A0751E13144200D2B789 /* Main.storyboard */,
-				CC30ED6F1E1D81D0006BAAB9 /* NotificationsVC.swift */,
-				CC30ED6D1E1D7AD1006BAAB9 /* ControlIoTVC.swift */,
-				CC30ED691E1D3B94006BAAB9 /* DevicesAndUsersTVC.swift */,
-				CC30ED5B1E1BCF3E006BAAB9 /* FilteringVC.swift */,
-				CC30ED5F1E1BE7DB006BAAB9 /* PriorityDeviceVC.swift */,
-				CCC6900E1E16AC89003B2B16 /* SideMenuTableVC.swift */,
-				CEF1A0851E1329C600D2B789 /* LoginVC.swift */,
-				CC42BBF71E14881800496329 /* SignupVC.swift */,
-				CEF1A08D1E132B7600D2B789 /* NetworkHealthCheckVC2.swift */,
-				CEF1A08B1E132AFE00D2B789 /* NetworkHealthCheckVC1.swift */,
-				CEF1A0891E132A6300D2B789 /* SystemReadyVC.swift */,
-				CEF1A0871E132A1100D2B789 /* CreateNetworkVC.swift */,
-				CEF1A0831E1328C600D2B789 /* LoginSignUpVC.swift */,
 				CEF1A0781E13144200D2B789 /* Assets.xcassets */,
+				CCC690021E1687D4003B2B16 /* left_sidemenu_button.png */,
 				CEF1A07A1E13144200D2B789 /* LaunchScreen.storyboard */,
 				CEF1A07D1E13144200D2B789 /* Info.plist */,
 			);
