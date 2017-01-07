@@ -114,17 +114,17 @@ class BallAnimationView: UIView, CAAnimationDelegate {
         }
         
         if let oval : CAShapeLayer = layers["oval"] as? CAShapeLayer{
-            oval.frame = CGRect(x: 0.4423 * oval.superlayer!.bounds.width, y: 0.25429 * oval.superlayer!.bounds.height, width: 0.11539 * oval.superlayer!.bounds.width, height: 0.06495 * oval.superlayer!.bounds.height)
+            oval.frame = CGRect(x: 0.44371 * oval.superlayer!.bounds.width, y: 0.27083 * oval.superlayer!.bounds.height, width: 0.08459 * oval.superlayer!.bounds.width, height: 0.04761 * oval.superlayer!.bounds.height)
             oval.path  = ovalPath(bounds: (layers["oval"] as! CAShapeLayer).bounds).cgPath
         }
         
         if let ball : CAShapeLayer = layers["ball"] as? CAShapeLayer{
-            ball.frame = CGRect(x: 0.4423 * ball.superlayer!.bounds.width, y: 0.68468 * ball.superlayer!.bounds.height, width: 0.11539 * ball.superlayer!.bounds.width, height: 0.06495 * ball.superlayer!.bounds.height)
+            ball.frame = CGRect(x: 0.4423 * ball.superlayer!.bounds.width, y: 0.70436 * ball.superlayer!.bounds.height, width: 0.08019 * ball.superlayer!.bounds.width, height: 0.04514 * ball.superlayer!.bounds.height)
             ball.path  = ballPath(bounds: (layers["ball"] as! CAShapeLayer).bounds).cgPath
         }
         
         if let polygon : CALayer = layers["polygon"] as? CALayer{
-            polygon.frame = CGRect(x: 0.39628 * polygon.superlayer!.bounds.width, y: 0.22089 * polygon.superlayer!.bounds.height, width: 0.20479 * polygon.superlayer!.bounds.width, height: 0.13174 * polygon.superlayer!.bounds.height)
+            polygon.frame = CGRect(x: 0.39628 * polygon.superlayer!.bounds.width, y: 0.21662 * polygon.superlayer!.bounds.height, width: 0.21144 * polygon.superlayer!.bounds.width, height: 0.13601 * polygon.superlayer!.bounds.height)
         }
         
         if let eclipse : CAShapeLayer = layers["eclipse"] as? CAShapeLayer{
@@ -173,10 +173,11 @@ class BallAnimationView: UIView, CAAnimationDelegate {
         let ball = layers["ball"] as! CAShapeLayer
         
         ////Ball animation
-        let ballPositionAnim      = CAKeyframeAnimation(keyPath:"position")
-        ballPositionAnim.values   = [NSValue(cgPoint: CGPoint(x: 0.5 * ball.superlayer!.bounds.width, y: 0.71715 * ball.superlayer!.bounds.height)), NSValue(cgPoint: CGPoint(x: 0.5 * ball.superlayer!.bounds.width, y: 0.28668 * ball.superlayer!.bounds.height))]
-        ballPositionAnim.keyTimes = [0, 1]
-        ballPositionAnim.duration = 1
+        let ballPositionAnim            = CAKeyframeAnimation(keyPath:"position")
+        ballPositionAnim.values         = [NSValue(cgPoint: CGPoint(x: 0.5 * ball.superlayer!.bounds.width, y: 0.71715 * ball.superlayer!.bounds.height)), NSValue(cgPoint: CGPoint(x: 0.5 * ball.superlayer!.bounds.width, y: 0.28668 * ball.superlayer!.bounds.height))]
+        ballPositionAnim.keyTimes       = [0, 1]
+        ballPositionAnim.duration       = 1
+        ballPositionAnim.timingFunction = CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseIn)
         
         let ballTransformAnim       = CAKeyframeAnimation(keyPath:"transform")
         ballTransformAnim.values    = [NSValue(caTransform3D: CATransform3DIdentity),
@@ -193,7 +194,7 @@ class BallAnimationView: UIView, CAAnimationDelegate {
         ////Polygon animation
         let polygonTransformAnim       = CAKeyframeAnimation(keyPath:"transform")
         polygonTransformAnim.values    = [NSValue(caTransform3D: CATransform3DMakeScale(0, 0, 1)),
-                                          NSValue(caTransform3D: CATransform3DMakeRotation(CGFloat(2 * M_PI), 0, 0, -1))]
+                                          NSValue(caTransform3D: CATransform3DConcat(CATransform3DMakeScale(1, 1, 0), CATransform3DMakeRotation(-CGFloat(2 * M_PI), 0, 0, 1)))]
         polygonTransformAnim.keyTimes  = [0, 1]
         polygonTransformAnim.duration  = 0.603
         polygonTransformAnim.beginTime = 0.798

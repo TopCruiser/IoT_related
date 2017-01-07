@@ -12,6 +12,7 @@ let SIGNUP_BOTTOMVIEW_PADDING : CGFloat = 30
 
 class LoginVC: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var inputFieldView: UIView!
     @IBOutlet weak var usernameTF: TJTextField!
     @IBOutlet weak var passwordTF: TJTextField!
     @IBOutlet weak var contentScrollView: UIScrollView!
@@ -23,7 +24,6 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         let screenSize = UIScreen.main.bounds
-        
         usernameTF.leftTextPedding = Int(Double(screenSize.width) * 0.04)
         passwordTF.leftTextPedding = Int(Double(screenSize.width) * 0.04)
         usernameTF.imageWidth = Int(Double(screenSize.width) * 0.1)
