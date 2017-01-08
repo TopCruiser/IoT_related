@@ -44,6 +44,93 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="uKI-YM-LZc"/>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="divider" translatesAutoresizingMaskIntoConstraints="NO" id="zc4-CG-jXE"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GKy-KJ-kAI" userLabel="LoginInputView">
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GEi-P5-J4c" customClass="TJTextField" customModule="DemoApp" customModuleProvider="target">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolerColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                <color key="value" red="0.50980392156862742" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="txtImage" value="icon_username"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="errorEntry" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftTextPedding">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="imageWidth">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="2SL-wU-reH" id="4cZ-SL-fgd"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GPr-da-3MF" customClass="TJTextField" customModule="DemoApp" customModuleProvider="target">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolerColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                <color key="value" red="0.50980392156862742" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="errorEntry" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftTextPedding">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="image" keyPath="txtImage" value="icon_password"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="imageWidth">
+                                                <integer key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="delegate" destination="2SL-wU-reH" id="WZj-GK-Yjf"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OME-YE-KX5">
+                                        <color key="backgroundColor" red="1" green="0.59607843137254901" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Sign In">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="NEL-kO-MKp" kind="show" id="Q5f-zX-mre"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zt-ud-1wg">
+                                        <state key="normal" title="Forgot Password">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="GPr-da-3MF" firstAttribute="width" secondItem="GKy-KJ-kAI" secondAttribute="width" id="1eL-Xw-0yU"/>
+                                    <constraint firstItem="GPr-da-3MF" firstAttribute="height" secondItem="GKy-KJ-kAI" secondAttribute="height" multiplier="0.15" id="1v9-Ff-ffg"/>
+                                    <constraint firstItem="OME-YE-KX5" firstAttribute="centerX" secondItem="GKy-KJ-kAI" secondAttribute="centerX" id="4HF-uP-aU5"/>
+                                    <constraint firstItem="GEi-P5-J4c" firstAttribute="width" secondItem="GKy-KJ-kAI" secondAttribute="width" id="FHh-yS-IYv"/>
+                                    <constraint firstItem="OME-YE-KX5" firstAttribute="height" secondItem="GKy-KJ-kAI" secondAttribute="height" multiplier="0.2" id="HVB-Ae-MmD"/>
+                                    <constraint firstItem="GEi-P5-J4c" firstAttribute="centerY" secondItem="GKy-KJ-kAI" secondAttribute="centerY" multiplier="0.3" id="HdN-lB-5Lj"/>
+                                    <constraint firstItem="3Zt-ud-1wg" firstAttribute="centerX" secondItem="GKy-KJ-kAI" secondAttribute="centerX" multiplier="1.55" id="NbU-wf-C1K"/>
+                                    <constraint firstItem="OME-YE-KX5" firstAttribute="centerY" secondItem="GKy-KJ-kAI" secondAttribute="centerY" multiplier="1.5" id="X5Y-IQ-hfC"/>
+                                    <constraint firstItem="GEi-P5-J4c" firstAttribute="height" secondItem="GKy-KJ-kAI" secondAttribute="height" multiplier="0.15" id="XUc-wr-smC"/>
+                                    <constraint firstItem="GEi-P5-J4c" firstAttribute="centerX" secondItem="GKy-KJ-kAI" secondAttribute="centerX" id="bJD-b5-GXU"/>
+                                    <constraint firstItem="3Zt-ud-1wg" firstAttribute="height" secondItem="GKy-KJ-kAI" secondAttribute="height" multiplier="0.15" id="eB3-kr-nfC"/>
+                                    <constraint firstItem="OME-YE-KX5" firstAttribute="width" secondItem="GKy-KJ-kAI" secondAttribute="width" multiplier="0.7" id="eSX-Ue-8qK"/>
+                                    <constraint firstItem="3Zt-ud-1wg" firstAttribute="width" secondItem="GKy-KJ-kAI" secondAttribute="width" multiplier="0.4" id="oaS-B7-Zc0"/>
+                                    <constraint firstItem="3Zt-ud-1wg" firstAttribute="centerY" secondItem="GKy-KJ-kAI" secondAttribute="centerY" multiplier="0.9" id="ocA-A3-vt2"/>
+                                    <constraint firstItem="GPr-da-3MF" firstAttribute="centerX" secondItem="GKy-KJ-kAI" secondAttribute="centerX" id="tNh-Qs-QO7"/>
+                                    <constraint firstItem="GPr-da-3MF" firstAttribute="centerY" secondItem="GKy-KJ-kAI" secondAttribute="centerY" multiplier="0.6" id="yyW-H1-ah0"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ta-Cc-yhI" userLabel="SignupView">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2V-N8-inp">
@@ -107,6 +194,7 @@
                         <constraints>
                             <constraint firstItem="zc4-CG-jXE" firstAttribute="height" secondItem="rvX-pg-sGO" secondAttribute="height" multiplier="0.01" id="21C-45-61t"/>
                             <constraint firstItem="5ta-Cc-yhI" firstAttribute="centerY" secondItem="rvX-pg-sGO" secondAttribute="centerY" multiplier="0.5" id="4YD-3Y-o7J"/>
+                            <constraint firstItem="GKy-KJ-kAI" firstAttribute="centerY" secondItem="rvX-pg-sGO" secondAttribute="centerY" multiplier="1.6" id="7gW-8s-BYW"/>
                             <constraint firstItem="5ta-Cc-yhI" firstAttribute="width" secondItem="rvX-pg-sGO" secondAttribute="width" id="9kK-cv-SeD"/>
                             <constraint firstItem="5ta-Cc-yhI" firstAttribute="height" secondItem="rvX-pg-sGO" secondAttribute="height" multiplier="0.5" id="D1R-Ss-W1R"/>
                             <constraint firstItem="uKI-YM-LZc" firstAttribute="width" secondItem="rvX-pg-sGO" secondAttribute="width" id="DfP-pF-cBk"/>
@@ -115,15 +203,19 @@
                             <constraint firstItem="zc4-CG-jXE" firstAttribute="width" secondItem="rvX-pg-sGO" secondAttribute="width" id="EvA-YW-TQF"/>
                             <constraint firstItem="zc4-CG-jXE" firstAttribute="centerY" secondItem="rvX-pg-sGO" secondAttribute="centerY" id="HeX-jr-I52"/>
                             <constraint firstItem="uKI-YM-LZc" firstAttribute="centerX" secondItem="rvX-pg-sGO" secondAttribute="centerX" id="MBF-N3-4FP"/>
+                            <constraint firstItem="GKy-KJ-kAI" firstAttribute="width" secondItem="rvX-pg-sGO" secondAttribute="width" id="OGn-CU-MHw"/>
+                            <constraint firstItem="GKy-KJ-kAI" firstAttribute="centerX" secondItem="rvX-pg-sGO" secondAttribute="centerX" id="PjU-bX-BZD"/>
                             <constraint firstItem="5ta-Cc-yhI" firstAttribute="centerX" secondItem="rvX-pg-sGO" secondAttribute="centerX" id="TtE-Sn-E0e"/>
                             <constraint firstItem="nE8-m9-rZT" firstAttribute="height" secondItem="rvX-pg-sGO" secondAttribute="height" multiplier="0.5" id="Vx2-LI-1te"/>
                             <constraint firstItem="zc4-CG-jXE" firstAttribute="centerX" secondItem="rvX-pg-sGO" secondAttribute="centerX" id="g99-Yl-Obi"/>
+                            <constraint firstItem="GKy-KJ-kAI" firstAttribute="height" secondItem="rvX-pg-sGO" secondAttribute="height" multiplier="0.5" id="iG2-fo-IFb"/>
                             <constraint firstItem="uKI-YM-LZc" firstAttribute="centerY" secondItem="rvX-pg-sGO" secondAttribute="centerY" id="lQY-FX-prg"/>
                             <constraint firstItem="nE8-m9-rZT" firstAttribute="centerY" secondItem="rvX-pg-sGO" secondAttribute="centerY" multiplier="1.5" id="uA1-iu-vtI"/>
                             <constraint firstItem="nE8-m9-rZT" firstAttribute="centerX" secondItem="rvX-pg-sGO" secondAttribute="centerX" id="zCc-Gt-ck6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="inputView1" destination="GKy-KJ-kAI" id="lvf-8s-2yW"/>
                         <outlet property="loginView" destination="nE8-m9-rZT" id="Ru7-1Z-cxp"/>
                         <outlet property="signupView" destination="5ta-Cc-yhI" id="qjl-vf-TVP"/>
                     </connections>
@@ -332,104 +424,13 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GKy-KJ-kAI" userLabel="InputView">
-                                                <subviews>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GEi-P5-J4c" customClass="TJTextField" customModule="DemoApp" customModuleProvider="target">
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolerColor">
-                                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                                <color key="value" red="0.50980392156862742" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="image" keyPath="txtImage" value="icon_username"/>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="errorEntry" value="NO"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="leftTextPedding">
-                                                                <integer key="value" value="10"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="imageWidth">
-                                                                <integer key="value" value="25"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <outlet property="delegate" destination="2SL-wU-reH" id="4cZ-SL-fgd"/>
-                                                        </connections>
-                                                    </textField>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GPr-da-3MF" customClass="TJTextField" customModule="DemoApp" customModuleProvider="target">
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolerColor">
-                                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                                <color key="value" red="0.50980392156862742" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="errorEntry" value="NO"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="leftTextPedding">
-                                                                <integer key="value" value="10"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="image" keyPath="txtImage" value="icon_password"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="imageWidth">
-                                                                <integer key="value" value="25"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                        <connections>
-                                                            <outlet property="delegate" destination="2SL-wU-reH" id="WZj-GK-Yjf"/>
-                                                        </connections>
-                                                    </textField>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OME-YE-KX5">
-                                                        <color key="backgroundColor" red="1" green="0.59607843137254901" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <state key="normal" title="Sign In">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                        <connections>
-                                                            <segue destination="NEL-kO-MKp" kind="show" id="Q5f-zX-mre"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zt-ud-1wg">
-                                                        <state key="normal" title="Forgot Password">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        </state>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstItem="GPr-da-3MF" firstAttribute="width" secondItem="GKy-KJ-kAI" secondAttribute="width" id="1eL-Xw-0yU"/>
-                                                    <constraint firstItem="GPr-da-3MF" firstAttribute="height" secondItem="GKy-KJ-kAI" secondAttribute="height" multiplier="0.15" id="1v9-Ff-ffg"/>
-                                                    <constraint firstItem="OME-YE-KX5" firstAttribute="centerX" secondItem="GKy-KJ-kAI" secondAttribute="centerX" id="4HF-uP-aU5"/>
-                                                    <constraint firstItem="GEi-P5-J4c" firstAttribute="width" secondItem="GKy-KJ-kAI" secondAttribute="width" id="FHh-yS-IYv"/>
-                                                    <constraint firstItem="OME-YE-KX5" firstAttribute="height" secondItem="GKy-KJ-kAI" secondAttribute="height" multiplier="0.2" id="HVB-Ae-MmD"/>
-                                                    <constraint firstItem="GEi-P5-J4c" firstAttribute="centerY" secondItem="GKy-KJ-kAI" secondAttribute="centerY" multiplier="0.3" id="HdN-lB-5Lj"/>
-                                                    <constraint firstItem="3Zt-ud-1wg" firstAttribute="centerX" secondItem="GKy-KJ-kAI" secondAttribute="centerX" multiplier="1.55" id="NbU-wf-C1K"/>
-                                                    <constraint firstItem="OME-YE-KX5" firstAttribute="centerY" secondItem="GKy-KJ-kAI" secondAttribute="centerY" multiplier="1.5" id="X5Y-IQ-hfC"/>
-                                                    <constraint firstItem="GEi-P5-J4c" firstAttribute="height" secondItem="GKy-KJ-kAI" secondAttribute="height" multiplier="0.15" id="XUc-wr-smC"/>
-                                                    <constraint firstItem="GEi-P5-J4c" firstAttribute="centerX" secondItem="GKy-KJ-kAI" secondAttribute="centerX" id="bJD-b5-GXU"/>
-                                                    <constraint firstItem="3Zt-ud-1wg" firstAttribute="height" secondItem="GKy-KJ-kAI" secondAttribute="height" multiplier="0.15" id="eB3-kr-nfC"/>
-                                                    <constraint firstItem="OME-YE-KX5" firstAttribute="width" secondItem="GKy-KJ-kAI" secondAttribute="width" multiplier="0.7" id="eSX-Ue-8qK"/>
-                                                    <constraint firstItem="3Zt-ud-1wg" firstAttribute="width" secondItem="GKy-KJ-kAI" secondAttribute="width" multiplier="0.4" id="oaS-B7-Zc0"/>
-                                                    <constraint firstItem="3Zt-ud-1wg" firstAttribute="centerY" secondItem="GKy-KJ-kAI" secondAttribute="centerY" multiplier="0.9" id="ocA-A3-vt2"/>
-                                                    <constraint firstItem="GPr-da-3MF" firstAttribute="centerX" secondItem="GKy-KJ-kAI" secondAttribute="centerX" id="tNh-Qs-QO7"/>
-                                                    <constraint firstItem="GPr-da-3MF" firstAttribute="centerY" secondItem="GKy-KJ-kAI" secondAttribute="centerY" multiplier="0.6" id="yyW-H1-ah0"/>
-                                                </constraints>
-                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="GKy-KJ-kAI" firstAttribute="centerY" secondItem="acm-wY-F2V" secondAttribute="centerY" multiplier="1.5" id="7FY-9R-PwU"/>
                                             <constraint firstItem="sOD-vo-7EA" firstAttribute="height" secondItem="acm-wY-F2V" secondAttribute="height" multiplier="0.1" id="8Kk-7T-99X"/>
-                                            <constraint firstItem="GKy-KJ-kAI" firstAttribute="height" secondItem="acm-wY-F2V" secondAttribute="height" multiplier="0.5" id="CzS-ls-a4e"/>
                                             <constraint firstItem="sOD-vo-7EA" firstAttribute="centerY" secondItem="acm-wY-F2V" secondAttribute="centerY" multiplier="0.3" id="HLY-CB-wrT"/>
                                             <constraint firstItem="sOD-vo-7EA" firstAttribute="width" secondItem="acm-wY-F2V" secondAttribute="width" multiplier="0.4" id="Sra-Yj-TIf"/>
                                             <constraint firstItem="sOD-vo-7EA" firstAttribute="centerX" secondItem="acm-wY-F2V" secondAttribute="centerX" multiplier="0.5" id="UQM-I1-99M"/>
-                                            <constraint firstItem="GKy-KJ-kAI" firstAttribute="centerX" secondItem="acm-wY-F2V" secondAttribute="centerX" id="iH7-5G-3SX"/>
-                                            <constraint firstItem="GKy-KJ-kAI" firstAttribute="width" secondItem="acm-wY-F2V" secondAttribute="width" id="py7-qb-BOx"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -463,6 +464,8 @@
                             <constraint firstItem="5FR-Oz-AZn" firstAttribute="centerY" secondItem="34E-dC-Qf7" secondAttribute="centerY" id="o5n-Kn-eob"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="btnSignIn" destination="OME-YE-KX5" id="Z1y-17-H6y"/>
                         <outlet property="contentScrollView" destination="e04-gp-ApI" id="yw2-dn-VM7"/>
@@ -628,7 +631,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="playback" tableViewCell="kRr-yA-fAv" id="tvp-nw-pjz">
-                                    <frame key="frameInset" width="375" height="59"/>
+                                    <frame key="frameInset" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
@@ -714,7 +717,7 @@
                                 <rect key="frame" x="0.0" y="136" width="375" height="123"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mym-WV-zKL" id="jEo-tQ-Oxw">
-                                    <frame key="frameInset" width="375" height="122"/>
+                                    <frame key="frameInset" width="375" height="123"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qfr-gU-JKZ">
@@ -875,7 +878,7 @@
                                 <rect key="frame" x="0.0" y="286" width="375" height="138"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xEH-GK-emh" id="Dap-Ci-OEp">
-                                    <frame key="frameInset" width="375" height="137"/>
+                                    <frame key="frameInset" width="375" height="138"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzM-bQ-1R8">
@@ -934,7 +937,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="149"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VNB-p5-2f2" id="UHY-5a-gk6">
-                                    <frame key="frameInset" width="375" height="148"/>
+                                    <frame key="frameInset" width="375" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Living Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rh1-TW-4Zg">
@@ -1343,8 +1346,8 @@
         <image name="wifi_ban" width="303" height="220"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Q5f-zX-mre"/>
         <segue reference="bBc-Mu-pqx"/>
-        <segue reference="uc1-pi-qL5"/>
         <segue reference="BHH-xd-BEs"/>
     </inferredMetricsTieBreakers>
 </document>
