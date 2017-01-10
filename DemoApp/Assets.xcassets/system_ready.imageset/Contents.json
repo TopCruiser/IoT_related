@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "left_sidemenu_button.png",
+      "filename" : "system_ready.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "left_sidemenu_button@2x.png",
       "scale" : "2x"
     },
     {
