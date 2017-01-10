@@ -159,8 +159,8 @@
 		CEF1A0701E13144200D2B789 /* DemoApp */ = {
 			isa = PBXGroup;
 			children = (
-				CC30ED771E1EE3E6006BAAB9 /* VCs */,
 				CC4433021E1411CC0040F638 /* CustomControls */,
+				CC30ED771E1EE3E6006BAAB9 /* VCs */,
 				CEF1A0781E13144200D2B789 /* Assets.xcassets */,
 				CCC690021E1687D4003B2B16 /* left_sidemenu_button.png */,
 				CEF1A07A1E13144200D2B789 /* LaunchScreen.storyboard */,

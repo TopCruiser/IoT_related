@@ -16,7 +16,7 @@ class SplashVC: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.isHidden = true;
-        self.perform(#selector(self.transitToNextViewController), with : nil, afterDelay : 3.0)
+        self.perform(#selector(self.transitToNextViewController), with : nil, afterDelay : 2.5)
         animView.addRisingAnimation()
     }
 
