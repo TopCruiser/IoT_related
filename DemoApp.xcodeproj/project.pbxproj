@@ -28,6 +28,11 @@
 		CCC6900C1E169AD9003B2B16 /* UISideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC690081E169AD9003B2B16 /* UISideMenuNavigationController.swift */; };
 		CCC6900D1E169AD9003B2B16 /* UITableViewVibrantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC690091E169AD9003B2B16 /* UITableViewVibrantCell.swift */; };
 		CCC6900F1E16AC89003B2B16 /* SideMenuTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCC6900E1E16AC89003B2B16 /* SideMenuTableVC.swift */; };
+		CCE4546D1E26478E0005AF18 /* CircleSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4546A1E26478E0005AF18 /* CircleSlider.swift */; };
+		CCE4546E1E26478E0005AF18 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4546B1E26478E0005AF18 /* Math.swift */; };
+		CCE4546F1E26478E0005AF18 /* TrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE4546C1E26478E0005AF18 /* TrackLayer.swift */; };
+		CCE454731E26C9EB0005AF18 /* GuestAccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE454721E26C9EB0005AF18 /* GuestAccessVC.swift */; };
+		CCE454751E26CD4C0005AF18 /* GuestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE454741E26CD4C0005AF18 /* GuestCell.swift */; };
 		CEF1A0721E13144200D2B789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1A0711E13144200D2B789 /* AppDelegate.swift */; };
 		CEF1A0741E13144200D2B789 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1A0731E13144200D2B789 /* SplashVC.swift */; };
 		CEF1A0771E13144200D2B789 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF1A0751E13144200D2B789 /* Main.storyboard */; };
@@ -63,6 +68,11 @@
 		CCC690081E169AD9003B2B16 /* UISideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UISideMenuNavigationController.swift; path = CustomControls/SideMenu/UISideMenuNavigationController.swift; sourceTree = "<group>"; };
 		CCC690091E169AD9003B2B16 /* UITableViewVibrantCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableViewVibrantCell.swift; path = CustomControls/SideMenu/UITableViewVibrantCell.swift; sourceTree = "<group>"; };
 		CCC6900E1E16AC89003B2B16 /* SideMenuTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableVC.swift; sourceTree = "<group>"; };
+		CCE4546A1E26478E0005AF18 /* CircleSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleSlider.swift; path = CustomControls/CircleSlider/CircleSlider.swift; sourceTree = "<group>"; };
+		CCE4546B1E26478E0005AF18 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Math.swift; path = CustomControls/CircleSlider/Math.swift; sourceTree = "<group>"; };
+		CCE4546C1E26478E0005AF18 /* TrackLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrackLayer.swift; path = CustomControls/CircleSlider/TrackLayer.swift; sourceTree = "<group>"; };
+		CCE454721E26C9EB0005AF18 /* GuestAccessVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuestAccessVC.swift; path = ../GuestAccessVC.swift; sourceTree = "<group>"; };
+		CCE454741E26CD4C0005AF18 /* GuestCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuestCell.swift; path = CustomControls/GuestCell.swift; sourceTree = "<group>"; };
 		CEF1A06E1E13144200D2B789 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF1A0711E13144200D2B789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF1A0731E13144200D2B789 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
@@ -99,6 +109,7 @@
 				CEF1A0751E13144200D2B789 /* Main.storyboard */,
 				CC30ED6F1E1D81D0006BAAB9 /* NotificationsVC.swift */,
 				CC30ED6D1E1D7AD1006BAAB9 /* ControlIoTVC.swift */,
+				CCE454721E26C9EB0005AF18 /* GuestAccessVC.swift */,
 				CC30ED691E1D3B94006BAAB9 /* DevicesAndUsersTVC.swift */,
 				CC30ED5B1E1BCF3E006BAAB9 /* FilteringVC.swift */,
 				CC30ED5F1E1BE7DB006BAAB9 /* PriorityDeviceVC.swift */,
@@ -117,13 +128,15 @@
 		CC4433021E1411CC0040F638 /* CustomControls */ = {
 			isa = PBXGroup;
 			children = (
+				CCE454691E26477F0005AF18 /* CircleSlider */,
 				CCC690041E169ACE003B2B16 /* SideMenu */,
 				CC4433041E1411E40040F638 /* TJTextField.swift */,
+				CC30ED731E1EB1EF006BAAB9 /* BallAnimationView.swift */,
 				CC30ED631E1BF5EC006BAAB9 /* PriorityDeviceCell.swift */,
 				CC30ED651E1D2DC2006BAAB9 /* PlayPauseButton.swift */,
+				CCE454741E26CD4C0005AF18 /* GuestCell.swift */,
 				CC30ED6B1E1D749D006BAAB9 /* DeviceCell.swift */,
 				CC30ED711E1D8397006BAAB9 /* NotificationCell.swift */,
-				CC30ED731E1EB1EF006BAAB9 /* BallAnimationView.swift */,
 				CC30ED751E1EB326006BAAB9 /* QCMethod.swift */,
 			);
 			name = CustomControls;
@@ -138,6 +151,16 @@
 				CCC690091E169AD9003B2B16 /* UITableViewVibrantCell.swift */,
 			);
 			name = SideMenu;
+			sourceTree = "<group>";
+		};
+		CCE454691E26477F0005AF18 /* CircleSlider */ = {
+			isa = PBXGroup;
+			children = (
+				CCE4546A1E26478E0005AF18 /* CircleSlider.swift */,
+				CCE4546B1E26478E0005AF18 /* Math.swift */,
+				CCE4546C1E26478E0005AF18 /* TrackLayer.swift */,
+			);
+			name = CircleSlider;
 			sourceTree = "<group>";
 		};
 		CEF1A0651E13144200D2B789 = {
@@ -243,12 +266,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCC6900B1E169AD9003B2B16 /* SideMenuTransition.swift in Sources */,
+				CCE454731E26C9EB0005AF18 /* GuestAccessVC.swift in Sources */,
+				CCE454751E26CD4C0005AF18 /* GuestCell.swift in Sources */,
 				CC3D62A11E13D7CF00EA66BA /* MainNC.swift in Sources */,
 				CEF1A0741E13144200D2B789 /* SplashVC.swift in Sources */,
 				CCC6900F1E16AC89003B2B16 /* SideMenuTableVC.swift in Sources */,
 				CC30ED721E1D8397006BAAB9 /* NotificationCell.swift in Sources */,
 				CC30ED601E1BE7DB006BAAB9 /* PriorityDeviceVC.swift in Sources */,
 				CEF1A08A1E132A6300D2B789 /* SystemReadyVC.swift in Sources */,
+				CCE4546D1E26478E0005AF18 /* CircleSlider.swift in Sources */,
 				CEF1A0881E132A1100D2B789 /* CreateNetworkVC.swift in Sources */,
 				CCC6900A1E169AD9003B2B16 /* SideMenuManager.swift in Sources */,
 				CEF1A08C1E132AFE00D2B789 /* NetworkHealthCheckVC1.swift in Sources */,
@@ -256,6 +282,7 @@
 				CC30ED6C1E1D749D006BAAB9 /* DeviceCell.swift in Sources */,
 				CC30ED641E1BF5EC006BAAB9 /* PriorityDeviceCell.swift in Sources */,
 				CEF1A0841E1328C600D2B789 /* LoginSignUpVC.swift in Sources */,
+				CCE4546F1E26478E0005AF18 /* TrackLayer.swift in Sources */,
 				CEF1A0861E1329C600D2B789 /* LoginVC.swift in Sources */,
 				CC4433051E1411E40040F638 /* TJTextField.swift in Sources */,
 				CEF1A0721E13144200D2B789 /* AppDelegate.swift in Sources */,
@@ -270,6 +297,7 @@
 				CEF1A08E1E132B7600D2B789 /* NetworkHealthCheckVC2.swift in Sources */,
 				CC30ED761E1EB326006BAAB9 /* QCMethod.swift in Sources */,
 				CC30ED5C1E1BCF3F006BAAB9 /* FilteringVC.swift in Sources */,
+				CCE4546E1E26478E0005AF18 /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

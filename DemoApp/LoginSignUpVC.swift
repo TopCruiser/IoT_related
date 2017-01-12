@@ -42,6 +42,11 @@ class LoginSignUpVC: UIViewController, UITextFieldDelegate {
         
         self.inputView2.isHidden = true
         self.inputView1.isHidden = true
+        self.userNameL.tintColor = UIColor(red: 255/255, green:152/255, blue:31/255, alpha:1)
+        self.userNameS.tintColor = UIColor(red: 255/255, green:152/255, blue:31/255, alpha:1)
+        self.passwordL.tintColor = UIColor(red: 255/255, green:152/255, blue:31/255, alpha:1)
+        self.passwordS.tintColor = UIColor(red: 255/255, green:152/255, blue:31/255, alpha:1)
+        self.emailS.tintColor = UIColor(red: 255/255, green:152/255, blue:31/255, alpha:1)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -91,24 +96,18 @@ class LoginSignUpVC: UIViewController, UITextFieldDelegate {
         
         self.inputView1.isHidden = true;
         
-        UIView.animate(withDuration: 0.1, delay: 0.2, options: UIViewAnimationOptions.curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0.4, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.3, options: UIViewAnimationOptions.curveEaseOut, animations: {
             if !self.toggleShow {
                 self.signupView.center.y -= (self.signupView.bounds.size.height / 3 + 20)
                 self.loginView.center.y += (self.loginView.bounds.size.height / 4 + 20)
-                self.divider.center.y = self.view.center.y + (self.loginView.bounds.size.height / 2 + 20)
-                self.inputView2.center.y = self.view.center.y
-                self.inputView2.isHidden = false
             } else{
                 self.signupView.center.y += (self.signupView.bounds.size.height / 3 + 20)
                 self.loginView.center.y -= (self.loginView.bounds.size.height / 4 + 20)
-                self.divider.center.y = self.view.center.y
-                self.inputView2.center.y = self.view.center.y * 1.5
-                self.inputView2.isHidden = true
             }
         }) { (Bool) in
-            
         }
-        UIView.animate(withDuration: 0.1, delay: 0.4, options: UIViewAnimationOptions.curveEaseOut, animations: {
+        
+        UIView.animate(withDuration: 0.3, delay: 0.7, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.3, options: UIViewAnimationOptions.curveEaseOut, animations: {
             if !self.toggleShow {
                 self.signupView.center.y += 20
                 self.loginView.center.y -= 20
@@ -119,31 +118,46 @@ class LoginSignUpVC: UIViewController, UITextFieldDelegate {
         }) { (Bool) in
             
         }
+        
+        ////////////
+        UIView.animate(withDuration: 0.5, delay: 0.5, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.3, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            self.inputView1.isHidden = true;
+            if !self.toggleShow {
+                self.divider.center.y = self.view.center.y + (self.signupView.bounds.size.height / 2 + 20)
+                self.inputView2.center.y = self.view.center.y
+            } else{
+                self.divider.center.y = self.view.center.y
+                self.inputView2.center.y = self.view.center.y * 1.5
+            }
+            
+        }) { (Bool) in
+        }
         toggleShow = !toggleShow
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            if !self.toggleShow {
+                self.inputView2.isHidden = true
+            } else {
+                self.inputView2.isHidden = false;
+            }
+        }
     }
     
     @IBAction func loginClick(_ sender: AnyObject) {
         animateView(view: self.loginView)
         
-        self.inputView2.isHidden = true;
-        UIView.animate(withDuration: 0.1, delay: 0.2, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0.4, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.3, options: UIViewAnimationOptions.curveEaseOut, animations: {
             if !self.toggleShow {
                 self.signupView.center.y -= (self.signupView.bounds.size.height / 3 + 20)
                 self.loginView.center.y += (self.loginView.bounds.size.height / 4 + 20)
-                self.divider.center.y = self.view.center.y - (self.loginView.bounds.size.height / 2 + 20)
-                self.inputView1.center.y = self.view.center.y * 1.1
-                self.inputView1.isHidden = false;
             } else{
                 self.signupView.center.y += (self.signupView.bounds.size.height / 3 + 20)
                 self.loginView.center.y -= (self.loginView.bounds.size.height / 4 + 20)
-                self.divider.center.y = self.view.center.y
-                self.inputView1.center.y = self.view.center.y * 1.5
-                self.inputView1.isHidden = true
             }
             }) { (Bool) in
+                
         }
 
-        UIView.animate(withDuration: 0.1, delay: 0.2, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.curveEaseOut, animations: {
+        UIView.animate(withDuration: 0.3, delay: 0.7, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.3, options: UIViewAnimationOptions.curveEaseOut, animations: {
             if !self.toggleShow {
                 self.signupView.center.y += 20
                 self.loginView.center.y -= 20
@@ -154,7 +168,27 @@ class LoginSignUpVC: UIViewController, UITextFieldDelegate {
         }) { (Bool) in
         }
 
+        ////////////
+        UIView.animate(withDuration: 0.5, delay: 0.5, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.3, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            self.inputView2.isHidden = true;
+            if !self.toggleShow {
+                self.divider.center.y = self.view.center.y - (self.loginView.bounds.size.height / 2 + 20)
+                self.inputView1.center.y = self.view.center.y * 1
+            } else{
+                self.divider.center.y = self.view.center.y
+                self.inputView1.center.y = self.view.center.y * 1.5
+            }
+            
+        }) { (Bool) in
+        }
         toggleShow = !toggleShow
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+            if !self.toggleShow {
+                self.inputView1.isHidden = true
+            } else {
+                self.inputView1.isHidden = false;
+            }
+        }
     }
     
     func animateView(view : UIView) {

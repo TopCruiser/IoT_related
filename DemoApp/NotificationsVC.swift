@@ -19,16 +19,12 @@ class NotificationsVC: UITableViewController {
 
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green:255/255, blue:255/255, alpha:1)
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green:152/255, blue:31/255, alpha:1)
         // Do any additional setup after loading the view.
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "left_sidemenu_button.png")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal), style: UIBarButtonItemStyle.plain, target: self, action: #selector(showSideMenu))
         self.navigationItem.title = "Notification"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor(red: 255/255, green:152/255, blue:31/255, alpha:1)]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor(red: 255/255, green:255/255, blue:255/255, alpha:1)]
         
         self.timeLabel.frame = CGRect(x: self.view.bounds.width - self.view.bounds.width * CGFloat(0.9), y: 0, width: self.view.bounds.width * CGFloat(0.9), height: self.view.bounds.height / 10)
         

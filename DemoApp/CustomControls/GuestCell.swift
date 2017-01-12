@@ -1,26 +1,22 @@
 //
-//  DeviceCell.swift
+//  GuestCell.swift
 //  DemoApp
 //
-//  Created by Foni Rewenig on 1/4/17.
+//  Created by Foni Rewenig on 1/11/17.
 //  Copyright © 2017 user. All rights reserved.
 //
 
 import UIKit
 
-class DeviceCell: UITableViewCell {
+class GuestCell: UITableViewCell {
 
-    @IBOutlet weak var title: UILabel!
-    @IBOutlet weak var state: UILabel!
-    
-    var button : PlayPauseButton! = nil
+    @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var textField: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-    }
-    
-    func toggle(_ sender: AnyObject!) {
-        self.button.showsMenu = !self.button.showsMenu
+        // Initialization code
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

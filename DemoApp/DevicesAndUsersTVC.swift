@@ -19,33 +19,31 @@ class DevicesAndUsersTVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green:255/255, blue:255/255, alpha:1)
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 255/255, green:152/255, blue:31/255, alpha:1)
         // Do any additional setup after loading the view.
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "left_sidemenu_button.png")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal), style: UIBarButtonItemStyle.plain, target: self, action: #selector(showSideMenu))
         self.navigationItem.title = "Devices and Users"
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor(red: 255/255, green:152/255, blue:31/255, alpha:1)]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor(red: 255/255, green:255/255, blue:255/255, alpha:1)]
         
         self.tableView.isScrollEnabled = false
+        self.tableView.separatorColor = UIColor.gray
         
-        //self.topView.addConstraint(NSLayoutConstraint(item: self.topView, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: self.tableView, attribute: NSLayoutAttribute.height, multiplier: 0.3, constant: 0))
         self.topView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height * CGFloat(0.3))
         
         let winSize = self.topView.frame.size
-        //self.button = PlayPauseButton(frame: CGRect(x: winSize.width / 2, y: winSize.height / 3, width: winSize.width / 8, height: winSize.width / 8))
         self.button = PlayPauseButton(frame: CGRect(x: 0, y: 0, width: winSize.width / 7, height: winSize.width / 7))
         self.button.backgroundColor = UIColor(red: 255/255, green: 152/255, blue: 31/255, alpha: 1)
         self.button.center = CGPoint(x: winSize.width / 2, y: winSize.height / 3)
         self.button.clipsToBounds = true;
         
         //half of the width
-        self.button.layer.cornerRadius = 25
+        //self.button.strokeColor = UIColor(red: 255/255, green:152/255, blue:31/255, alpha:1).cgColor
+        self.button.miterLimit = 100
+        self.button.lineWidth = 2.0
+        self.button.layer.cornerRadius = winSize.width / 14 // 7*2
         self.button.layer.borderColor = UIColor.clear.cgColor
-        self.button.layer.borderWidth=2.0;
+        self.button.layer.borderWidth = 2.0;
         
         self.button.addTarget(self, action: #selector(toggle(_:)), for:.touchUpInside)
         
@@ -81,6 +79,27 @@ class DevicesAndUsersTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! DeviceCell
 
+        let winSize = cell.contentView.bounds.size
+        cell.button = PlayPauseButton(frame: CGRect(x: 0, y: 0, width: winSize.height / 2.5, height: winSize.height / 2.5))
+        cell.button.backgroundColor = UIColor(red: 255/255, green: 152/255, blue: 31/255, alpha: 1)
+        
+        //        self.button.translatesAutoresizingMaskIntoConstraints = false
+        //        self.contentView.addConstraint(NSLayoutConstraint(item: self.button, attribute: NSLayoutAttribute.centerX, relatedBy: NSLayoutRelation.equal, toItem: self.contentView, attribute: NSLayoutAttribute.centerX, multiplier: 1, constant: 0))
+        //        self.contentView.addConstraint(NSLayoutConstraint(item: self.button, attribute: NSLayoutAttribute.centerY, relatedBy: NSLayoutRelation.equal, toItem: self.contentView, attribute: NSLayoutAttribute.centerY, multiplier: 1, constant: 0))
+        
+        cell.button.center = CGPoint(x: winSize.width * CGFloat(0.9), y: winSize.height / 1.5)
+        cell.button.clipsToBounds = true;
+        
+        //half of the width
+        cell.button.lineWidth = 1.0
+        cell.button.layer.cornerRadius = winSize.height / 5
+        cell.button.layer.borderColor = UIColor.clear.cgColor
+        cell.button.layer.borderWidth = 1.0;
+        
+        cell.button.addTarget(cell, action: #selector(cell.toggle(_:)), for:.touchUpInside)
+        
+        cell.addSubview(cell.button)
+        
         // Configure the cell...
         cell.title.text = titlesArray[indexPath.row]
         return cell
@@ -89,50 +108,4 @@ class DevicesAndUsersTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return self.view.bounds.height / 8
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
